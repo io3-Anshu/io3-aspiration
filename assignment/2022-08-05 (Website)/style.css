@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ......nav..... */
+.nav {
+  display: flex;
+  width: 100vw;
+  height: 8%;
+  background-color: rgb(89, 89, 213);
+}
+#youtube {
+  display: flex;
+  justify-content: start;
+  border: 1px solid black;
+  width: 30vw;
+  padding: 5px;
+  height: 50px;
+  background-color: rgb(243, 148, 148);
+}
+.search {
+  font-size: 10px;
+  width: 35%;
+  height: 50px;
+  background-color: rgb(171, 49, 49);
+}
+.search-under {
+  float: left;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  padding: 9px;
+  font-size: 15px;
+}
+.search-icon {
+  width: 50px;
+  height: 50px;
+  float: right;
+  padding: 9px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+.tell {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(86, 148, 181);
+}
+.bell {
+  display: flex;
+  justify-content: end;
+  border: 1px solid black;
+  padding: 1px;
+  font-size: 20px;
+  width: 45%;
+  height: 50px;
+  background-color: rgb(153, 199, 155);
+}
+.info {
+  display: flex;
+  justify-content: end;
+  border: 1px solid black;
+  padding: 13px;
+  font-size: 20px;
+  width: 35%;
+  height: 50px;
+  background-color: rgb(26, 61, 28);
+}
+.side {
+  padding: 25px;
+  position: fixed;
+  border-right: 1px solid gray;
+  text-align: left;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-size: 100%;
+  width: 300px;
+  height: 100vh;
+  background-color: rgb(74, 74, 132);
+}
