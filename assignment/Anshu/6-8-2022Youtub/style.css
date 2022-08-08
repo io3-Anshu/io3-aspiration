@@ -113,6 +113,16 @@
 .fa-book-open-reader {
   color: gray;
   font-size: 10px;
+  .fa-square-plus {
+    cursor: pointer;
+    color: gray;
+    font-size: 17px;
+  }
+  .fa-home {
+    color: gray;
+    font-size: 9px;
+    padding: 8px;
+  }
   padding: 8px;
 }
 
@@ -122,16 +132,6 @@
   color: gray;
   font-size: 17px;
   margin-top: 5px;
-}
-.fa-square-plus {
-  cursor: pointer;
-  color: gray;
-  font-size: 17px;
-}
-.fa-home {
-  color: gray;
-  font-size: 9px;
-  padding: 8px;
 }
 .fa-youtube {
   color: red;
