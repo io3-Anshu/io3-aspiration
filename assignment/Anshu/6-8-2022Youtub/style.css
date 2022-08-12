@@ -113,19 +113,27 @@
 .fa-book-open-reader {
   color: gray;
   font-size: 10px;
-  .fa-square-plus {
-    cursor: pointer;
-    color: gray;
-    font-size: 17px;
-  }
-  .fa-home {
-    color: gray;
-    font-size: 9px;
-    padding: 8px;
-  }
+}
+.fa-square-plus {
+  cursor: pointer;
+  color: gray;
+  font-size: 17px;
+}
+.fa-home {
+  color: gray;
+  font-size: 9px;
   padding: 8px;
 }
-
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 250px;
+  margin-top: 20%;
+}
+.infoxy {
+  margin: 15% 12% 0% 0%;
+}
 .fa-bell,
 .fa-microphone,
 .fa-magnifying-glass {
@@ -137,6 +145,27 @@
   color: red;
   padding-left: 0%;
 }
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  margin-left: 20%;
+  margin-top: 0%;
+  position: fixed;
+  top: 7%;
+  z-index: 1;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 110px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  border-radius: 20%;
+}
+
 .videos {
   z-index: -1;
   width: 81%;
@@ -148,11 +177,21 @@
   flex-wrap: wrap;
 }
 .animation {
-  width: 300px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  margin-top: 10%;
 }
 .teasels,
 .bear,
 .book {
   padding: 5%;
+}
+.cercle {
+  width: 56px;
+  height: 60px;
+  padding: 12px;
+  margin: 7px;
+  border-radius: 50%;
+  background-color: #00ff327d;
 }
