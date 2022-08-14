@@ -148,7 +148,7 @@
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
-  background-color: white;
+  background-color: transparent;
   margin-left: 20%;
   margin-top: 0%;
   position: fixed;
@@ -158,12 +158,12 @@
 
 .flex-container > div {
   background-color: #f1f1f1;
-  width: 110px;
-  margin: 10px;
+  width: 80px;
+  margin: 14px;
   text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  border-radius: 20%;
+  line-height: 16px;
+  font-size: 11px;
+  border-radius: 39%;
 }
 
 .videos {
