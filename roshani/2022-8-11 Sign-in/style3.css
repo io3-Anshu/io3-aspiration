@@ -475,10 +475,9 @@ body {
 .del,
 .mess,
 .clock {
-  padding: 3%;
-  width: 14%;
-  width: 25%;
-  font-size: large;
+  padding: 1%;
+  width: 18%;
+  font-size: 15px;
 }
 /* end hidden box 1 */
 /* end here first email design */
@@ -1129,4 +1128,174 @@ body {
   cursor: pointer;
   top: -110.9%;
   border: 1px solid rgb(149, 179, 227);
+}
+
+/* ------media screen 1000px to 1920px------- */
+
+/* ------start=>left-sidebar------- */
+@media screen and (min-width: 1000px) and (max-width: 1920px) {
+  .fa-bars {
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    font-size: 22px;
+    color: rgb(112, 110, 110);
+    text-shadow: 0px 0px 6px rgb(165 198 229);
+  }
+  /* ------start=>compose------- */
+  .compose {
+    width: 55%;
+    height: 8%;
+    margin-left: 6%;
+    font-size: 14px;
+    padding: 1%;
+  }
+  .sidebar-right {
+    right: 1%;
+    top: 0%;
+  }
+  .navbar-1 {
+    width: 75%;
+  }
+  .search {
+    width: 40%;
+  }
+  .nav-2 {
+    right: 4%;
+  }
+  .navbar-2 {
+    width: 75%;
+  }
+  .nav-2-2 {
+    right: 6%;
+  }
+  .primary,
+  .social,
+  .promotion {
+    font-size: 16px;
+  }
+  .space {
+    font-size: 15px;
+    top: 25%;
+    left: 7%;
+  }
+  .para {
+    font-size: 10px;
+  }
+  .time {
+    right: 2%;
+    width: 7%;
+  }
+}
+
+/* ------media screen 600px to 1099px------- */
+
+/* ------start=>left-sidebar------- */
+
+@media screen and (min-width: 600px) and (max-width: 1099px) {
+  .fa-bars {
+    top: 21%;
+    left: 23%;
+    font-size: 15px;
+  }
+  .compose {
+    width: 60%;
+    height: 5%;
+    font-size: 10px;
+  }
+  .index,
+  .starred,
+  .snoozed,
+  .send,
+  .drafts,
+  .more {
+    font-size: 15px;
+  }
+  .sidebar-right {
+    width: 7%;
+  }
+  .nav {
+    height: 75%;
+  }
+  .search {
+    width: 60%;
+    padding-top: 4%;
+    font-size: 13px;
+    padding-top: 4%;
+  }
+  .adjust {
+    width: 15%;
+    font-size: 14px;
+    padding-top: 4%;
+  }
+  .nav-2 {
+    top: 12%;
+    right: 5%;
+  }
+  .que,
+  .setting,
+  .more-app {
+    font-size: 14px;
+  }
+  .nav-2-1 {
+    height: 50%;
+    top: 8%;
+  }
+  .select,
+  .right-arrow,
+  .dot {
+    font-size: 12px;
+  }
+  .nav-2-2 {
+    top: 8%;
+    right: 9%;
+    height: 50%;
+  }
+  .date,
+  .arrow1,
+  .arrow2 {
+    font-size: 10px;
+  }
+  .primary,
+  .social,
+  .promotion {
+    font-size: 14px;
+    width: 18%;
+    top: 15%;
+  }
+  .mail-box {
+    width: 3%;
+  }
+  .mail-star {
+    width: 18%;
+  }
+  .space {
+    font-size: 10px;
+    top: 35%;
+    left: 9%;
+  }
+  .para {
+    font-size: 6px;
+  }
+  .time {
+    right: 2%;
+    font-size: 6px;
+  }
+  /* ------hover start----- */
+  .mail-box-d {
+    width: 3%;
+  }
+  .mail-star-d {
+    width: 18%;
+  }
+  .down,
+  .del,
+  .mess,
+  .clock {
+    font-size: 9px;
+  }
+  .time-d {
+    right: 2%;
+    font-size: 6px;
+  }
 }

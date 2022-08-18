@@ -42,81 +42,225 @@
 .first,
 .last {
   position: relative;
+  width: 47%;
 }
 .first-name {
-  width: 80%;
   height: 100%;
-  font-size: 14px;
   margin: 0% 0% 0% 0%;
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid gray;
-  padding: 3%;
   border-radius: 5px;
-  overflow: hidden;
   text-overflow: ellipsis;
-  transition: 0.25s;
   white-space: nowrap;
-}
-.first-name:focus,
-.last-name:focus {
-  border: 1px solid blue;
-  outline: none;
-  overflow: hidden;
-}
-.first.active,
-.first-name,
-.first-name:active + .label,
-.first-name:focus + .label {
-  top: -14%;
-  left: 7%;
   width: 90%;
-  font-size: 15px;
-  color: blue;
-  padding: 5%;
+  padding: 0%;
   overflow: hidden;
   transition: 00.25s;
-  background-color: rgb(195, 71, 71);
+  color: white;
+  background-color: white;
 }
+.first-name:focus {
+  border: 2px solid blue;
+  outline: none;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+  color: black;
+}
+.first-name:active + .label1,
+.first-name:focus + .label1 {
+  position: absolute;
+  top: -6px;
+  color: blue;
+  overflow: hidden;
+  transition: 0.25s;
+  background-color: white;
+}
+.label1 {
+  position: absolute;
+  top: 22%;
+  left: 5%;
+  width: 42%;
+  font-size: 13px;
+}
+
 .last-name {
-  width: 80%;
   height: 100%;
-  font-size: 14px;
-  margin: 0% 0% 0% 5%;
+  margin: 0% 0% 0% 0%;
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid gray;
-  padding: 5%;
   border-radius: 5px;
-}
-
-.last.active .label,
-.last:focus + .label,
-.last:active + .label {
-  top: -7px;
-  left: 8px;
-  font-size: large;
-  position: absolute;
-  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 90%;
+  padding: 0%;
+  overflow: hidden;
+  transition: 00.25s;
+  color: white;
   background-color: white;
-  color: blue;
 }
-
+.last-name:focus {
+  border: 2px solid blue;
+  outline: none;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+  color: black;
+}
+.last-name:active + .label2,
+.last-name:focus + .label2 {
+  position: absolute;
+  top: -6px;
+  color: blue;
+  overflow: hidden;
+  transition: 0.25s;
+  background-color: white;
+}
+.label2 {
+  position: absolute;
+  top: 22%;
+  left: 5%;
+  width: 42%;
+  font-size: 13px;
+}
 .gmail {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 50%;
   height: 6%;
   margin: 2% 0% 0% 5%;
-  border: 1px solid gray;
   border-radius: 5px;
   font-size: 15px;
 }
 .user-name {
-  width: 100%;
   height: 100%;
-  border-radius: 5px;
-  padding: 3%;
-  border: white;
+  margin: 0% 0% 0% 0%;
   font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 90%;
+  padding: 0%;
+  overflow: hidden;
+  transition: 00.25s;
+  color: white;
+  background-color: white;
+}
+.user-name:focus {
+  border: 2px solid blue;
+  outline: none;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+  color: black;
+}
+.user-name:active + .label3,
+.user-name:focus + .label3 {
+  position: absolute;
+  top: -6px;
+  color: blue;
+  overflow: hidden;
+  transition: 0.25s;
+  background-color: white;
+}
+.label3 {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  width: 23%;
+  font-size: 15px;
+}
+.box3 {
+  display: flex;
+  width: 50%;
+  height: 6%;
+  margin: 2% 0% 0% 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pass,
+.con {
+  position: relative;
+}
+.password {
+  height: 100%;
+  margin: 0% 0% 0% 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 90%;
+  padding: 0%;
+  overflow: hidden;
+  transition: 00.25s;
+  color: white;
+  background-color: white;
+}
+.password:focus {
+  border: 2px solid blue;
+  outline: none;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+  color: black;
+}
+.password:active + .label4,
+.password:focus + .label4 {
+  position: absolute;
+  top: -6px;
+  color: blue;
+  overflow: hidden;
+  transition: 0.25s;
+  background-color: white;
+}
+.label4 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 45%;
+  font-size: 12px;
+}
+
+.confirm {
+  height: 100%;
+  margin: 0% 0% 0% 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  padding: 0%;
+  overflow: hidden;
+  transition: 00.25s;
+  color: white;
+  background-color: white;
+}
+.confirm:focus {
+  border: 2px solid blue;
+  outline: none;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+  color: black;
+}
+.confirm:active + .label5,
+.confirm:focus + .label5 {
+  position: absolute;
+  top: -6px;
+  color: blue;
+  overflow: hidden;
+  transition: 0.25s;
+  background-color: white;
+}
+.label5 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 45%;
+  font-size: 12px;
 }
 
 .letters {
@@ -134,42 +278,33 @@
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.box3 {
-  display: flex;
-  width: 50%;
-  height: 6%;
-  margin: 2% 0% 0% 5%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.password {
-  width: 50%;
-  height: 100%;
-  font-size: 14px;
-  margin: 0% 0% 0% 0%;
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid gray;
-  padding: 3%;
-  border-radius: 5px;
-}
-.confirm {
-  width: 50%;
-  height: 100%;
-  font-size: 14px;
-  margin: 0% 0% 0% 5%;
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid gray;
-  padding: 3%;
-  border-radius: 5px;
-}
+
 .symbols {
   width: 50%;
   height: 6%;
-  margin: 2% 0% 0% 5%;
+  margin: 1% 0% 0% 5%;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
+.label {
+  position: absolute;
+  bottom: 35.6%;
+  left: 6%;
+}
+
+.show {
+  position: absolute;
+  bottom: 35.5%;
+  left: 10%;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: rgb(41, 127, 233);
+}
 #gender {
-  width: 50%;
+  width: 45%;
   height: 6%;
   font-size: 14px;
   margin: 5% 0% 0% 5%;
@@ -177,17 +312,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .list-of-mon {
-  width: 50%;
+  width: 47%;
   height: 6%;
   display: flex;
   justify-content: space-evenly;
-  margin: 2% 0% 0% 5%;
+  margin: 1% 0% 0% 4%;
 }
 #months {
   width: 30%;
   border-radius: 5px;
   padding: 2%;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -197,7 +332,7 @@
   border: 1px solid black;
   border-radius: 5px;
   padding: 3%;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -211,48 +346,31 @@
   border: 1px solid black;
   font-family: Arial, Helvetica, sans-serif;
 }
-.label {
-  position: absolute;
-  bottom: 41%;
-  left: 6%;
-}
-
-label {
-  position: absolute;
-  bottom: 40.5%;
-  left: 10%;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-a {
-  text-decoration: none;
-  color: rgb(41, 127, 233);
-}
 .box4 {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 45%;
   height: 6%;
   margin: 10% 0% 0% 5%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .sign {
-  width: 50%;
+  width: 45%;
   height: 100%;
   margin: 0% 0% 0% 1%;
   font-size: 17px;
   text-decoration: none;
-  text-shadow: 0px 0px 10px rgb(139, 139, 247);
+  text-shadow: 0px 0px 10px rgb(139, 190, 247);
   font-family: Arial, Helvetica, sans-serif;
 }
 .done {
   width: 30%;
-  height: 100%;
+  height: 90%;
   color: white;
   margin: 0% 0% 0% 0 0%;
   font-size: 15px;
-  padding: 2% 0% 0% 8%;
+  padding: 2% 0% 0% 5%;
   border: 1px solid blue;
   background-color: blue;
   border-radius: 4px;
@@ -310,30 +428,6 @@ a {
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* hover-start */
-/* .last-name:hover,
-.first-name:hover {
-  padding: 0% 0% 0% 3%;
-  color: rgb(9, 99, 210);
-  border: 1px solid blue;
-  cursor: pointer;
-} */
-.gmail:hover {
-  border: 1px solid blue;
-}
-.user-name:hover {
-  color: rgb(9, 99, 210);
-  cursor: pointer;
-}
-.password:hover,
-.confirm:hover {
-  padding: 0% 0% 0% 3%;
-  font-size: 10px;
-  color: rgb(9, 99, 210);
-  border: 1px solid blue;
-  cursor: pointer;
-}
 #gender:hover {
   border: 1px solid rgb(9, 99, 210);
   color: rgb(9, 99, 210);
@@ -364,4 +458,16 @@ a {
 .next:hover {
   box-shadow: 0px 0px 0px 0px white;
   cursor: pointer;
+}
+
+/* ------media query start => min-width:1199px to max:1920 -------*/
+@media screen and (min-width: 1199px) and (max-width: 1920px) {
+  .label1,
+  .label2,
+  .label3,
+  .label4,
+  .label5 {
+    font-size: 10px;
+    top: 30%;
+  }
 }
