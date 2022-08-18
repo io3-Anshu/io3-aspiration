@@ -39,8 +39,12 @@
   margin: 2% 0% 0% 5%;
   font-family: Arial, Helvetica, sans-serif;
 }
+.first,
+.last {
+  position: relative;
+}
 .first-name {
-  width: 50%;
+  width: 80%;
   height: 100%;
   font-size: 14px;
   margin: 0% 0% 0% 0%;
@@ -48,17 +52,54 @@
   border: 1px solid gray;
   padding: 3%;
   border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.25s;
+  white-space: nowrap;
+}
+.first-name:focus,
+.last-name:focus {
+  border: 1px solid blue;
+  outline: none;
+  overflow: hidden;
+}
+.first.active,
+.first-name,
+.first-name:active + .label,
+.first-name:focus + .label {
+  top: -14%;
+  left: 7%;
+  width: 90%;
+  font-size: 15px;
+  color: blue;
+  padding: 5%;
+  overflow: hidden;
+  transition: 00.25s;
+  background-color: rgb(195, 71, 71);
 }
 .last-name {
-  width: 50%;
+  width: 80%;
   height: 100%;
   font-size: 14px;
   margin: 0% 0% 0% 5%;
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid gray;
-  padding: 3%;
+  padding: 5%;
   border-radius: 5px;
 }
+
+.last.active .label,
+.last:focus + .label,
+.last:active + .label {
+  top: -7px;
+  left: 8px;
+  font-size: large;
+  position: absolute;
+  font-weight: 400;
+  background-color: white;
+  color: blue;
+}
+
 .gmail {
   display: flex;
   justify-content: space-between;
@@ -172,19 +213,20 @@
 }
 .label {
   position: absolute;
-  bottom: 38%;
+  bottom: 41%;
   left: 6%;
 }
 
 label {
   position: absolute;
-  bottom: 37.5%;
+  bottom: 40.5%;
   left: 10%;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
 a {
   text-decoration: none;
+  color: rgb(41, 127, 233);
 }
 .box4 {
   display: flex;
@@ -198,9 +240,8 @@ a {
 .sign {
   width: 50%;
   height: 100%;
-  color: rgb(9, 99, 210);
-  margin: 0% 0% 0% 0%;
-  font-size: 15px;
+  margin: 0% 0% 0% 1%;
+  font-size: 17px;
   text-decoration: none;
   text-shadow: 0px 0px 10px rgb(139, 139, 247);
   font-family: Arial, Helvetica, sans-serif;
@@ -271,13 +312,13 @@ a {
 }
 
 /* hover-start */
-.last-name:hover,
+/* .last-name:hover,
 .first-name:hover {
   padding: 0% 0% 0% 3%;
   color: rgb(9, 99, 210);
   border: 1px solid blue;
   cursor: pointer;
-}
+} */
 .gmail:hover {
   border: 1px solid blue;
 }

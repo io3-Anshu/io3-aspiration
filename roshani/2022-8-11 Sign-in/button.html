@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .input-box {
+      margin: 20% auto;
+      position: relative;
+    }
+    .input {
+      width: 200px;
+      height: 50px;
+      border-radius: 20px;
+      border: 1px solid burlywood;
+      padding: 12px;
+      transition: 0.55s;
+      color: white;
+    }
+
+    input:focus {
+      outline: none;
+      border: 2px solid blue;
+      position: absolute;
+      left: 1px;
+      top: 30%;
+      padding: 0 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: 0.25s;
+      white-space: nowrap;
+      color: rgb(8, 8, 8);
+    }
+    .inp-label {
+      top: 25px;
+      left: 8px;
+      font-size: large;
+      position: absolute;
+    }
+    .input-box.active .inp-label,
+    .input:focus + .inp-label,
+    .input:active + .inp-label {
+      top: -7px;
+      left: 8px;
+      font-size: large;
+      position: absolute;
+      font-weight: 400;
+      background-color: white;
+      color: rgb(255, 0, 13);
+    }
+  </style>
+  <body>
+    <div class="input-box">
+      <input type="text" class="input" />
+      <label class="inp-label"> follow </label>
+    </div>
+  </body>
+</html>
