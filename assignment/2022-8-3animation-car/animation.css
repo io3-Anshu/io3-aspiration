@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: cornflowerblue;
+}
+
+/*........Ak@.com...........*/
+
+.road {
+  width: 99vw;
+  height: 100vh;
+}
+/*........white-car2.......*/
+
+.white-car3 {
+  width: 35px;
+  height: 18px;
+  position: absolute;
+  bottom: 36%;
+  left: 0%;
+  animation: car-3 12s infinite 2s normal;
+}
+@keyframes car-3 {
+  0% {
+    bottom: 36%;
+    left: 0%;
+  }
+
+  20% {
+    bottom: 36%;
+    left: 25%;
+  }
+
+  40% {
+    bottom: 57%;
+    left: 25%;
+    transform: rotate(-90deg);
+  }
+
+  55% {
+    bottom: 57%;
+    left: 40%;
+    transform: rotate(0deg);
+  }
+
+  75% {
+    bottom: 71%;
+    left: 40%;
+    transform: rotate(-90deg);
+  }
+
+  80% {
+    bottom: 71%;
+    left: 59%;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    bottom: 100%;
+    left: 59%;
+    transform: rotate(-90deg);
+  }
+}
+
+/*......blue-car2....*/
+
+.blue-car2 {
+  width: 40px;
+  height: 55px;
+  position: absolute;
+  bottom: 34%;
+  right: 0%;
+  animation: car-2 15s ease infinite 1s normal;
+}
+
+@keyframes car-2 {
+  0% {
+    bottom: 34%;
+    right: 0%;
+  }
+
+  20% {
+    bottom: 34%;
+    right: 23%;
+  }
+
+  40% {
+    bottom: 55%;
+    right: 23%;
+    transform: rotate(90deg);
+  }
+
+  70% {
+    bottom: 55%;
+    right: 38%;
+    transform: rotate(0deg);
+  }
+
+  95% {
+    bottom: 95%;
+    right: 39%;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    bottom: 100%;
+    right: 39%;
+    transform: rotate(90deg);
+  }
+}
+
+/*......red-car2....*/
+
+.red-car {
+  width: 40px;
+  height: 55px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  animation: red-car 15s ease infinite 1s normal;
+}
