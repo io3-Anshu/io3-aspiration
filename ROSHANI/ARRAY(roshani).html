@@ -84,7 +84,8 @@ console.log(week.indexOf("thursday"),week.indexOf("tuesday"),week.indexOf("frida
 //console.log("9. find the last index in following arrays")
  var words = ['true','monday', 'false', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] //indexOf last value => name = 10
  var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] // indexOf last value => saturday = 6
- console.log(words.length-1)
+ words.length-1;
+ console.log(words)
  // or
 //  console.log(words.indexOf("name"))
 //  console.log(week.indexOf("saturday"))
@@ -93,19 +94,23 @@ console.log(week.indexOf("thursday"),week.indexOf("tuesday"),week.indexOf("frida
 /*=======================================================================*/
 //console.log(" 10. Include in arrays ")
 var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday']
- console.log(week.push ("sunday", "wednesday","friday") ) 
-console.log(week.unshift ("sunday", "wednesday","friday") ) 
+week.push ("sunday", "wednesday","friday")
+console.log(week) 
+// console.log(week.unshift ("sunday", "wednesday","friday") ) 
 
 var numbers = [115 ,54,0, 101,90, 130, 56,]
-console.log(numbers.push(-44, 0.52,-52, 12,  8 ) ) 
+numbers.push(-44, 0.52,-52, 12,  8 )
+console.log(numbers) 
 /*----------------------------------------------------------------------------*/
 
 /*=======================================================================*/
 // console.log("11. insert the element at end of array")
 var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday']  
-console.log(week.push ("friday") ) 
+week.push ('friday')
+console.log(week) ;
  var numbers = [115 ,54,0, 101,90, 130, 56]
- console.log(numbers.push(-44, 0.52,-52, 12,  8 ) ) 
+ numbers.push(-44, 0.52,-52, 12,  8 )
+ console.log(numbers) ;
 /*----------------------------------------------------------------------------*/
 
 /*=======================================================================*/
@@ -113,9 +118,11 @@ console.log(week.push ("friday") )
 var week = ['sunday', ' monday', ' tuesday', ' wednesday ', 'thursday',' friday',' saturday'] 
 // console.log(week.splice(-1) ) 
 // or
-console.log(week.pop()) ;
+week.pop()
+console.log(week) ;
  var numbers = [115 ,54,0, 101,90, 130, 56] 
-console.log(numbers.pop()) ;
+ numbers.pop()
+ console.log(numbers) ;
 /*----------------------------------------------------------------------------*/
 
 /*=======================================================================*/
