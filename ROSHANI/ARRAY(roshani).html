@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<body>
+    <script>
+        /*===================================================================*/
+        // console.log("2.  write a javascript function to check whether an input is an array or not.")
+         // Test data :
+         const isName = [1,2,3,4,'I am a string',"array"];
+         console.log(['I am a string']); 
+         console.log(([1,2,3,4,'I am a string',"array"]));
+         console.log(Array.isArray(isName))
+         /*---------------------------------------------------------------------------*/
+
+       /*=======================================================================*/
+     // console.log(" 3. Find the length of following")
+
+      var number = [5 ,12, 8, 130, 44] 
+      var alphabet = ['g', 'e', 'e', ' k', 's',] // output 5
+      var clothes = ['shoes', 'shirt', 'socks', 'sweaters'] // output 4
+      var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] // output 7
+      var words = ['monday', 'false', '60', 'g ', 'cat','undefined', '90','50','name' ] // output 9
+      console.log(week.length)  
+      /*----------------------------------------------------------------------------*/
+      
+      /*=======================================================================*/
+     //  console.log("4. Find the elements of following")
+      var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] 
+      var clothes = ['shoes', 'shirt', 'socks', 'sweaters'] 
+      var words = ['monday', 'false', '60', 'g ', 'cat','undefined', '90','50','name' ] 
+      var alphabet = ['g', 'e', 'e', ' k', 's',] 
+      console.log(week)  // output => sunday, monday, tuesday, wednesday, thursday,friday,saturday     
+      /*----------------------------------------------------------------------------*/
+   
+ /*=======================================================================*/
+      // console.log("5. Add two array (concat)")
+      var array1 = ['sunday', 'monday']
+      var array2 = ['tuesday', 'wednesday ']
+      var array3 = ['thursday','friday','saturday'] 
+      console.log(array1.concat(array2).concat(array3))
+      var number = [5 ,12, 8, 130, 44]
+     var alphabet = ['g', 'e', 'e', ' k', 's',] 
+      console.log(number.concat(alphabet))
+
+/*=======================================================================*/
+//console.log("6. sort following array")
+var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] //friday,monday,saturday,sunday,thursday,tuesday,wednesday
+var alphabet = ['g', 'e', 'e', ' k', 's',] // k,e,e,g,s
+var numbers = [15 ,54, 101, 130, -44, 0.52, 12, 8 ] // -44,0.52,101,12,130,15,54,8
+var clothes = ['shoes', 'shirt', 'socks', 'sweaters'] // shirt,shoes,socks,sweaters
+var words = ['monday', 'false', '60', 'g ', 'cat','undefined', '90','50','name' ] 
+console.log(words.sort())  // 50,60,90,cat,false,g ,monday,name,undefined
+/*----------------------------------------------------------------------------*/
+
+/*=======================================================================*/
+//console.log("7. reverse the following arrays")
+
+var words = ['true','monday', 'false', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] // name,50,90,AJay,undefined,cat,g ,60,false,monday,true
+var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] // saturday,friday,thursday,wednesday ,tuesday,monday,sunday
+var alphabet = ['g','t','a', 'e', 'e', ' k', 's',] // s, k,e,e,a,t,g
+var numbers = [115 ,54,0, 101,90, 130, 56,-44, 0.52,-52, 12,  8 ] // 8,12,-52,0.52,-44,56,130,90,101,0,54,115
+var clothes = ['shoes', 'shirt', 'socks', 'sweaters'] // sweaters,socks,shirt,shoes
+console.log(clothes.reverse())
+/*----------------------------------------------------------------------------*/
+
+/*=======================================================================*/
+//console.log("8. find the index in following arrays")
+
+var words = ['true','monday', 'false', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] //indexOf (90 =8 , true =0 , AJay = 7 )
+var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] // indexOf (thursday = 4,tuesday = 2, friday = 5, monday = 1)
+var alphabet = ['g','t','a', 'e', 'e', ' k', 's',] // indexOf k = 5, t = 1, a = 2
+var numbers = [115 ,54,0, 101,90, 130, 56,-44, 0.52,-52, 12,  8 ] // indexOf 90 =4 ,  -52 =9 ,  0 =2 ,  56 = 6
+var clothes = ['shoes', 'shirt', 'socks', 'sweaters']  // shoes =0 ,socks =2 ,sweaters =3 
+console.log(week.indexOf("thursday"),week.indexOf("tuesday"),week.indexOf("friday"),week.indexOf("monday"))
+
+/*----------------------------------------------------------------------------*/
+
+/*=======================================================================*/
+//console.log("9. find the last index in following arrays")
+ var words = ['true','monday', 'false', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] //indexOf last value => name = 10
+ var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] // indexOf last value => saturday = 6
+ console.log(words.indexOf("name"))
+ console.log(week.indexOf("saturday"))
+/*----------------------------------------------------------------------------*/
+
+/*=======================================================================*/
+//console.log(" 10. Include in arrays ")
+var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday']
+ console.log(week.push ("sunday", "wednesday","friday") ) 
+console.log(week.unshift ("sunday", "wednesday","friday") ) 
+
+var numbers = [115 ,54,0, 101,90, 130, 56,]
+console.log(numbers.push(-44, 0.52,-52, 12,  8 ) ) 
+/*----------------------------------------------------------------------------*/
+
+/*=======================================================================*/
+// console.log("11. insert the element at end of array")
+var week = ['sunday', 'monday', 'tuesday', 'wednesday ', 'thursday','friday','saturday'] 
+ console.log(week.push ("friday") ) 
+ var numbers = [115 ,54,0, 101,90, 130, 56]
+ console.log(numbers.push(-44, 0.52,-52, 12,  8 ) ) 
+/*----------------------------------------------------------------------------*/
+
+/*=======================================================================*/
+// console.log("12. remove the element from end of array")
+var week = ['sunday', ' monday', ' tuesday', ' wednesday ', 'thursday',' friday',' saturday'] 
+ console.log(week.pop()) ;
+ var numbers = [115 ,54,0, 101,90, 130, 56] 
+console.log(numbers.pop()) ;
+/*----------------------------------------------------------------------------*/
+
+/*=======================================================================*/
+// console.log("13.remove the 0 index of array")
+ var month = ['jan','feb','mar','apr','may','june','july','aug','sep','oct','nov','dec']; 
+  console.log(month.shift()) ;
+
+ var numbers = [115 ,54,0, 101,90, 130, 56]  
+  console.log(numbers.shift()) ;
+/*----------------------------------------------------------------------------*/
+    </script>
+</body>
+</html>
