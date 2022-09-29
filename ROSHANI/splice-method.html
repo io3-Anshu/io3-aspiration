@@ -164,12 +164,26 @@ var index = words.indexOf("60");
 words.splice(index,Infinity,"60");
 console.log(words);
 
-var words = ['true','monday', 'false', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] 
+var words = ['true','monday', 'false','school', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] 
 // write the index of AJay and replace AJay to rani
 var index = words.indexOf("AJay");
 console.log(index);
 words.splice(index,1,"rani");
 console.log(words);
+
+// disappear this word (monday)
+var index = words.indexOf("monday");
+words.splice(index,1);
+console.log(words);
+
+// combine this words (god, RaDha, Ram, university, college) end the array
+words.splice(words.length,0,"god, RaDha, Ram, university, college");
+console.log(words)
+
+// combine this words (god, RaDha, Ram, university, college) start the array
+words.splice(length,0,"god, RaDha, Ram, university, college");
+console.log(words)
+
 
 /*----------------------------------------------------------------------------*/
 
