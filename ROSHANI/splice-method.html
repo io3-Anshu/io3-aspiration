@@ -140,6 +140,42 @@ console.log(words.splice(-1)[0])
 
 /*----------------------------------------------------------------------------*/
 
+/*=======================================================================*/
+console.log("15. find the  element in following arrays")
+// convert cat to elephant and 50 to fifty
+var words = ['true','monday', 'false', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] 
+var index = words.indexOf("cat");
+words.splice(index,1,"dog");
+console.log(words);
+
+// convert 50 to fifty
+var index = words.indexOf("50");
+words.splice(index,1,"fifty");
+console.log(words);
+
+
+// remove the words after 90 
+var index = words.indexOf("90");
+words.splice(index,words.length);
+console.log(words);
+
+// remove the words after 60 
+var index = words.indexOf("60");
+words.splice(index,Infinity,"60");
+console.log(words);
+
+var words = ['true','monday', 'false', '60', 'g ', 'cat','undefined','AJay', '90','50','name' ] 
+// write the index of AJay and replace AJay to rani
+var index = words.indexOf("AJay");
+console.log(index);
+words.splice(index,1,"rani");
+console.log(words);
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
     </script>
 </body>
 </html>
