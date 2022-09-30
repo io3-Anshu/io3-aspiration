@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION_MAP</title>
+</head>
+<body>
+    <h1>HEY!! FUNCTION_MAP</h1>
+    <script>
+//=========================================================================================
+// get the value above 9
+const array_1 = [1,4,9,16,25,36,49,64];        
+ let new_Arr = array_1.filter((curElem,index,arr) => {
+    return curElem > 9;
+})
+console.log(array_1);
+console.log(new_Arr);
+
+//------------------------------------------------------------------------        
+const array1 = [1,4,9,16,25,36,49,64];
+// I return new array without mutating the original array 
+// num(true) > 9  > num (false)
+let newArr = array1.map((curElem,index,arr) => {
+    return curElem > 9;
+})
+console.log(array1);
+console.log(newArr);
+
+//-----------------------------------------------------------------------------------
+// Find out index, element value and is in which array 
+let neWArr_1 = array1.map((curElem,index,arr) => {
+    console.log(`index no. = ${index} and the value is ${curElem} belong to ${arr}`)
+})
+
+//==============================================================================================
+// Deference between map and forEach
+
+// 1. The first difference between map() and forEach() is the returning value . 
+// The forEach () method return undefined and map() return a new array with the transformed elements .
+// Even if they do the same job , the returning value remains difference.
+
+// 2. Ability to chain other methods
+// The second difference between  these array methods is the fact that map()  is chainable.
+// This means that you can attach reduce(), sort(),filter(), and so on after performing a map() method on an array.
+
+// that's something you can't do with forEach () because as you might guess , it return undefined.
+
+let neWArr_2 = array1.map((curElem,index,arr) => {
+ return `"index no. = "${index}" and the value is" ${curElem} "belong to" ${arr}`;
+})
+console.log(neWArr_2);
+
+let neWArr_3 = array1.forEach((curElem,index,arr) => {
+    return `"index no. =" ${index} "and the value is" ${curElem} "belong to" ${arr}`
+})
+console.log(neWArr_3);
+
+//=================================================================================================
+
+console.log(`1. find the square root of each element in an array ?`);
+let array__1 = [25,36,49,64,81,100];
+
+// let arr__sqr = array__1.map ((curElem) => Math.sqrt(curElem))
+// console.log(arr__sqr);
+
+let arr_sqr = array__1.map ((curElem) => {
+    return `"this is the value" ${curElem} "is  square root "${Math.sqrt(curElem)}`;
+})
+console.log(arr_sqr);
+
+//-----------------------------------------------------------------
+console.log(`2. Multiply each element by 2 and return only those elements which are greater than 10 ?`)
+let array__2 = [2,3,4,5,6,8,9] 
+
+let arr__2_ = array__2.map ((curElem)=> curElem*2) .filter((curElem)=> curElem>10);
+console.log(arr__2_);
+// or 
+
+// let arr__2_1 = array__2.map ((curElem)=>{
+//     return curElem*2;
+// }) .filter((curElem)=>{
+//     return curElem>10;
+// })
+// console.log(arr__2_1);
+
+//==============================================================================================
+let a_rr = [2,5,6,3,2]
+
+let sum = a_rr.reduce((accumulator, curElem, index, a_rr) =>{
+    return accumulator += curElem;
+})
+ console.log(sum);
+
+ let Multiply = a_rr.reduce((accumulator, curElem, index, a_rr) =>{
+    return accumulator *= curElem;
+})
+ console.log(Multiply);
+
+// only one sub extra marks add here  
+ let sum_PL = a_rr.reduce((accumulator, curElem, index, a_rr) =>{
+    return accumulator += curElem;
+},8);
+ console.log(sum_PL);
+
+let arr__2_ad = array__2.map ((curElem)=> curElem*2) .filter((curElem)=> curElem>10).reduce((accumulator, curElem) => {
+    return accumulator += curElem;
+});
+console.log(arr__2_ad);
+
+//==============================================================================================
+
+// How to fatten  an array
+// converting 2D and 3D array into one dimensional array
+
+const a__rr = [[125,524,632],['ram','sam','raj'],[2,3, 5, 2],['ga-ga',52,5]];
+let flatArr = a__rr.reduce((accumulator,curElem)=>{
+    return accumulator.concat(curElem);
+});
+console.log(flatArr);
+
+  </script>  
+</body>
+</html>
+
