@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE-&-TIME</title>
+</head>
+<body>
+    <H1>DATE-&-TIME</H1>
+<!---===========================================================================--->
+<p>click the button to display a date after changing</p>
+<button onclick="myFunction()">try it</button>   
+<p id="demo"></p> 
+<p id="time"></p> 
+
+    <script>
+//-----------------------------------------------------------------
+function myFunction(){
+    var t = new Date();
+    t.setHours(2); // it's optionally
+    document.getElementById("demo").innerHTML = t; 
+}
+
+// (function(){
+//     setInterval(() => {
+//         var d = new Date ().toLocaleTimeString();
+//         document.getElementById("time").innerHTML = d ;
+//     } ,10)
+// })();
+//---------------------------------------------------------------------------------
+
+//=====================================================================================
+// DATE-&-TIME
+/** Javascript date objects represent a single moment in time in a platform-independent format. 
+    Date object contain a Number that represents milliseconds since 1 january 1970 UTC.**/
+
+// CREATING DATE OBJECTS
+// There are 4 ways to create a new date object :
+
+// new Date ()
+// new Date(year, month, day, hours, minutes, seconds, milliseconds);
+// // it takes 7 arguments
+// new Date(milliseconds);
+// //we cannot avoid month section
+// new Date(Date string)
+
+//Date objects are created with the new Date() constructor.
+let curDate = new Date();
+console.log(curDate) 
+// console.log(new Date().toString());
+// console.log(new Date().toLocaleString());
+console.log(curDate.toLocaleString());
+console.log(curDate.getFullYear()); 
+console.log(curDate.getMonth()) ;
+console.log(curDate.getDate());
+console.log(curDate.getDay());
+
+
+
+// return the numeric value corresponding to the current time the number of 
+// milliseconds elapsed since january 1, 1970 00:00:00 UTC
+console.log(Date.now());
+
+/*** There must be month  argument. ***/
+/** let da = new Date(2022);
+console.log(da.toLocaleString()); 
+ ops !! **/
+ 
+ // january = 0 and december = 11 
+ let D = new Date(2022, 0, 2, 13,50,25,55);
+ console.log(D.toLocaleString());
+
+let d = new Date(2022, 9, 2, 13,50,25,55);
+console.log(d.toLocaleString());
+
+
+
+    </script>
+</body>
+</html>
