@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-BUTTON</title>
+</head>
+<style>
+    body{
+        background-color: rgb(42, 90, 74);
+        display: grid;
+        place-items: center;
+    }
+    p{
+        margin: 1%;
+        font-size: 20px;
+
+    }
+    button{
+    display: inline-block;
+    cursor: pointer;
+    color: darkcyan;
+    background-color: lightskyblue;
+    border-radius: 50px;
+    height: 30px;
+    margin: 2%;
+    border:none;
+    }
+</style>
+<body>
+    <P class="para">look at here !</P>
+    <P class="para">it's amazing</P>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h1 id="heading"><i>Chang the content of the h1</i></h1>
+
+    <form action="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">other</label>
+        <input type="radio" name="gender" id="">
+    </form>
+    <button onclick="changeContent()">click here</button>
+    <script>
+        const changeContent = () => {
+            // document.getElementById('heading').innerHTML = "change the sentence";
+
+// By tacking the Reference, heading is the object here
+ const headingChange = document.getElementById('heading');
+ headingChange.innerHTML= "hi! there"
+
+ // find tag, className and name
+// console.log(document.getElementsByClassName('para'));
+// console.log(document.getElementsByTagName('p'));
+// console.log(document.getElementsByName('gender'));
+        }
+    </script>
+</body>
+</html>

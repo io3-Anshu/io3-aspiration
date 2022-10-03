@@ -1,0 +1,47 @@
+<!-- 
+/*** Difference between getElementById and querySelector ?
+1.  getElementById
+ Syntax:
+element = document . getElementById(id);
+
+Returns a reference to the element by its ID.
+If the element with the specified ID is not in the document, it will return null.
+
+2.  querySelector
+ Syntax:
+element = document .querySelector(selector);
+
+Returns the first element within the document that matches the specified group of selectors,
+or null if no matches are found
+
+***/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!-- document Object M -->
+</head>
+<body>
+<ul>
+    <li id="web-id">PHP</li>
+    <li>HTML</li>
+    <li class="web-class">CSS</li>
+    <li class="web-class">JavaScript</li>
+</ul>
+    <script>
+console.log( document.getElementById('web-id').innerHTML);
+console.log( document.querySelector('#web-id').innerHTML);
+
+/** What if you want to get the HTML content of the third li ?
+    You will not be able to use getElementById because there is no id associated
+    with it. But you can so with querySelector. **/
+console.log( document.querySelector('ul li.web-class').innerHTML);
+console.log( document.querySelector('li.web-class').innerHTML);
+console.log( document.querySelector('.web-class').innerHTML);
+
+    </script>
+</body>
+</html>
