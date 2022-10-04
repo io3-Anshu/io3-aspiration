@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-1</title>
+</head>
+<body id="body">
+<!-- ul>li*5 => enter -->
+    <ul id="element">
+        <li  id="first" class="list_Item">first</li>
+        <li id="newLi" class="list_Item">child</li>
+        <li class="list_Item">child</li>
+        <li class="list_Item">child</li>
+        <li class="list_Item">child</li>
+    </ul>
+
+    <table>
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+        <tr>
+            <td>three</td>
+            <td>four</td>
+        </tr>
+    </table>
+
+    <script>
+        // Root Node
+        // console.log(document.documentElement);
+        // console.log(document.body);
+        // console.log(document.head);
+
+        // Children
+        // console.log(document.body.children);
+        // console.log(document.body.childNodes);
+        // console.log(document.body.firstChild);
+        // console.log(document.body.lastChild);
+        // console.log(document.body.firstElementChild);
+        // console.log(document.body.lastElementChild);
+        for (node of document.body.children){
+            console.log(node)
+        }
+
+        /* deference between dom vs array */
+        console.log(document.body.children);
+        // vs
+        console.log(Array.from(document.body.children));
+
+       // Siblings 
+    //    const ulTag = document.body.children[0];
+    //    const firstLi = ulTag.children[1] ;
+    //    const secondLi = ulTag.children[2];
+    //    console.log(firstLi.previousElementSibling.textContent)
+       
+    //    // Table DOM Manipulation
+    //    const tableTag = document.body.children[1];
+    //    console.log(tableTag.tBodies[0].rows[0].cells[1].textContent)
+    //    console.log(tableTag.rows)
+    //    // ID search
+    //    const ul_Tag = document.getElementById("element");
+    //    ulTag.style.backgroundColor = "blue";
+    //    console.log();
+       
+    //    // search
+      
+        // console.log(element.id) ;   
+
+    //    const listItem =  document.getElementsByClassName("list_Item");
+    //    console.log( document.getElementsByClassName("list_Item"));
+
+
+    //    const listItem =  document.querySelectorAll(".list_Item");
+    //     console.log(listItem) ;   
+    
+    // Attributes
+    // console.log(element.getAttribute('data')) ;
+    // console.log(element.setAttribute('order-placed', 'pending')) ;  
+    // console.log(element.getAttribute('order-placed')) ;   
+    // console.log(element.hasAttribute('order-placed')) ;   
+    // console.log(element.removeAttribute('order-placed')) ;   
+    // console.log(element.hasAttribute('order-placed')) ;   
+    // console.log(element.attributes) ;   
+    
+    // Creating and Removing the node elements
+    // const newDiv = document.createElement('div');
+    // const newText = document.createTextNode('hello world');
+    // newDiv.appendChild(newText)
+    // body.append(newDiv);
+    // body.prepend(newDiv);
+    // body.before(newDiv);
+    // body.after(newDiv);
+    // first.replaceWith(newDiv);
+    // first.remove();
+
+    const newDiv_1 = document.createElement('p');
+    newDiv_1.innerHTML = ` <ul id="element">
+        <li  id="first" class="list_Item">first</li>
+        <li class="list_Item">child</li>
+        <li class="list_Item">child</li>
+        <li class="list_Item">child</li>
+        <li class="list_Item">child</li>
+    </ul>`
+    newLi.append(newDiv_1)
+
+    // Events 
+ 
+
+
+
+    </script>
+</body>
+</html>
