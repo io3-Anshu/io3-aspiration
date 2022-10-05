@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT</title>
+</head>
+<body>
+    <script>
+//===========================================================================================        
+ var bioData ={
+    f_name :"AliNa",
+    l_name:"ShaRma",
+    profession:"Account",
+    age:14
+ }
+console.log(bioData);
+console.log(bioData.f_name);
+
+// change property 
+bioData.profession = "Accountancy";
+console.log(bioData);
+
+// Add a new property
+bioData.middleName = "Raj"
+console.log(bioData);
+
+// delete property name
+delete bioData.middleName;
+console.log(bioData);
+
+//=================================================================================
+let lecture=10;
+let section=3;
+let title='JavaScript';
+
+const course ={
+    lecture:10,
+    section:3,
+    title:'JavaScript',
+    notes: {              // <---- nestled
+       introduction:"welcome to JS course"
+    },
+    enroll(){
+    console.log(`You are successfully enrolled`)
+    }
+}
+course.enroll()
+console.log(course);
+
+// Factory function
+function createCourse (){  
+   return {
+        lecture:10,
+        section:3,
+        title:'JavaScript',
+        notes: {              // <---- nestled
+            introduction:"welcome to JS course"
+        },
+        enroll(){
+        console.log(`You are successfully enrolled`)
+        }
+    }
+}
+ course.enroll();
+
+// Constructor Function
+function createCourse (title){
+    this.title = title,
+    this.enroll = function(){
+        console.log('You are successfully enrolled');
+    }
+}
+delete course.title; // delete title
+course.checkEnrollMent = function(){
+    console.log('New property add successfully enrolled');
+}
+course.enroll();
+console.log(course);
+
+//===========================================================================================================
+// Primitive Datatype
+let number = 10;
+// pass by value
+let number_2 = number;
+number = 15;
+console.log(number);
+console.log(number_2);
+
+// Reference Datatype
+let obj = {number : 10};
+// pass by reference
+let obj_2 = obj;
+obj.number = 15 ;
+console.log(obj);
+console.log(obj_2);
+//---------------------------------------------------
+const course_1 = {
+    title:'javascript',
+    enroll(){
+    console.log('New property add successfully enrolled');
+    }
+ }
+
+const course_2 = {...course_1 }
+console.log(course_1);
+course_2.title = "c++";
+console.log(course_2);
+// or
+const course_3 = Object.assign({},course_1);
+course_3.title = "python";
+console.log(course_3);
+// or 
+// for in
+for(let key in course){
+    console.log(key,course[key]);
+}
+//or 
+// for of
+for(let key of Object.keys(course)){
+    console.log(key,course[key]);
+}
+// or 
+const course_4 = {};
+for(let key of Object.keys(course)){
+    console.log(course_1[key] = course[key]);
+}
+    </script>
+</body>
+</html>
