@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING-PRACTICE</title>
+</head>
+<body>
+    <script>
+//========================================================================================
+// find the length of string provide below 
+let string = 'hi this is string';
+console.log(string.length);
+
+
+// find the last index number of string below provide
+let string_1 ='hi this is string';
+console.log(string_1.length-1);
+
+// create a veritable's of string with 150 latter || digit and console it make sure it's  output is in 50 latter || digit
+let words = " hello ! there we are fifty words with spaces ' ' rat beataese quos vero. Deleniti aut nam doloremque accusamus libero facere nihil sit consequuntur. " ;
+console.log(words.length); // ??
+let fiftyWords = words.slice(0,50)
+console.log(fiftyWords); // ??
+console.log(fiftyWords.length); // ??
+
+
+// convert below providing string into array have 5 value and convert it again with array have 8 value 
+let string_2 = 'you, can, do, any, thing if u believe';
+// let arrVlu = 
+console.log(string_2.split(" ",5))
+console.log(string_2.split(" ",8))
+
+// find "believe " is  present or not in below provide string  and console it
+let string_3 = 'you, can, do, any, thing if u believe';
+console.log(string_3.includes("believe"));
+
+
+// convert multidimensional array (nested array)  into dimensional array 
+let array = [[[],[],[],], [[],[],[],], [[],[],[],]];
+console.log(array.concat());
+
+
+// find the sqrt of following element of array  and multiply each with 4 and return only  greater then 15
+const array_1 = [4,9,16,25,36,49,64,81];
+// const arr_1 = array_1.map(Math.sqrt)
+// console.log(arr_1)
+const arr = array_1.map(myFunction)
+function myFunction(arr) {
+    return arr*4
+}
+console.log(arr);
+
+    </script>
+</body>
+</html>
