@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    #btn{
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 00.5rem;
+        border: none;
+        background-color: rgb(195, 171, 217);
+        font-weight: 600;
+    }
+</style>
+<body>
+<p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas temporibus mollitia culpa, ea quasi architecto fugiat quibusdam reprehenderit quisquam omnis laboriosam. Fuga atque, quam unde corrupti ut officiis molestias dignissimos commodi tenetur ipsa expedita nisi consequatur dolores eaque ex voluptas nobis! Tenetur necessitatibus qui quod, obcaecati cumque libero? A ut molestiae neque consequuntur laborum tempora tenetur, corrupti vel, temporibus est quam! Perspiciatis sequi pariatur quae minus expedita sunt distinctio reprehenderit corrupti, exercitationem suscipit, ducimus sapiente voluptatum quaerat deserunt quia. Eveniet, perferendis eum error amet temporibus iste dicta perspiciatis aliquid sit nesciunt sequi voluptatum alias maiores animi veritatis, incidunt nisi, natus laudantium. Officia sint fugiat similique vero sed modi adipisci tempora unde, nulla cupiditate corporis in voluptates aliquid reprehenderit illo officiis nam facilis commodi ut, doloribus eligendi libero laborum. Mollitia porro voluptatem non minima, rerum nobis tempore vero atque quam dignissimos, necessitatibus perferendis libero ad corporis vel quis harum totam cumque odio. Quae saepe tempora vero modi, nemo, amet accusamus dolorum fuga quisquam recusandae expedita! Amet dolorem voluptatum quidem in architecto eos corporis veritatis quaerat placeat natus expedita excepturi est qui officia, facere voluptates commodi molestiae aliquam rerum distinctio laborum aut itaque fuga. Iure ad aperiam, ipsa eaque incidunt voluptas temporibus?</p>
+    <!-- button#btn*3 -->
+    <button id="btn" onclick="toggleHide()">submit</button>
+    <button id="btn" onclick="myfun()">click me :)</button>
+    <button id="btn" onclick="mywhatsapp()">whatsapp</button>
+
+    <script>
+/*==============================================================================================*/        
+/*  BROWSER EVENTS :
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+    submit
+    focus
+    DOMContentLoaded
+    transitionend
+*/
+
+/* HTML events are "things" that happen to HTML elements.
+* When JavaScript is used in html pages, JavaScript can "react" on these events.
+
+** HTML Events 
+* An HTML event can be something the browser does, or something a does.
+
+** Here are some examples of html events:
+
+* An HTML web page has finished loading 
+* An HTML input field was changed
+* An HTML button was changed
+* Often , when events happen, you may want to do something.
+
+** JavaScript lets you execute code when  events are detected.
+
+** HTML allows event handler attributes, with JavaScript code , to be added to html element 
+**========================================================================================================================================*/
+
+let para = document.getElementById('para');
+para.addEventListener('mouseover' , function run(){
+    console.log('Mouse Inside')
+});
+para.addEventListener('mouseout' , function run(){
+    console.log('Mouse nuw went outside')
+});
+
+function toggleHide(){
+    let btn = document.getElementById('btn');
+    let para = document.getElementById('para');
+    if(para.style.display != 'none'){
+    para.style.display = 'none';
+    }else{
+        para.style.display = 'block';
+
+    }
+}
+function myfun(){
+        document.body.style.backgroundColor = '#3b5999';
+        document.body.style.color = 'white';
+}
+function mywhatsapp(){
+        document.body.style.backgroundColor = '#25D366';
+        document.body.style.color = 'white';
+}
+/* facebk = #3b5999
+    twitter = #00aced
+    whatsapp = #25D366
+    youtube = cd201f */ 
+    
+    </script>
+</body>
+</html> 

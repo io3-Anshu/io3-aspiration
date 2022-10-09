@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS-2</title>
+</head>
+<body>
+    <form action="" onsubmit="submitFunction()">
+        <label for="">Name</label>
+        <input type="text" id="fname" onfocus="focusFunction(this)" onblur="blr_function(this)"  onchange="changeFunction(this)"  onselect="selectFunction()" oninvalid="('Enter your correct name')" required><br><br>
+        
+        <label for="">Email</label>
+        <input type="email" id="fname" onfocus="focusFunction(this)" onblur="blr_function(this)"  onchange="changeFunction(this)"  onselect="selectFunction()" required><br><br>
+        
+        <label for="">Class</label>
+        <input type="text" id="fname" onfocus="focusFunction(this)" onblur="blr_function(this)"><br><br>
+
+        <label for="">Country</label>
+        <select id="" onchange="changeFunction(this)">
+            <option value="india">india</option>
+            <option value="pakistan">pakistan</option>
+            <option value="bangladesh">bangladesh</option>
+            <option value="sri lanka">sri lanka</option>
+            <option value="nepal">nepal</option>
+        </select>
+        <input type="submit">
+    </form><br><br>
+<div id="test" style="border:1px solid #245aac;">hey there!</div>
+<script>
+    function focusFunction(element){
+        element.style.background ="lime";
+    }
+
+    function blr_function(element){
+        element.style.background ="";
+    }
+
+    function inputFunction(element){
+        var x = element.value;
+        document.getElementById("test").innerHTML = x ;
+    }
+
+    function changeFunction(element){
+        var x = element.value;
+        document.getElementById("test").innerHTML = x ;
+    }
+
+    function selectFunction(){
+        console.log("you selected some text");
+    }
+
+    function submitFunction(){
+        var x = document.getElementById("fname").value;
+        alert("HELLO" + " " + x);
+    }
+</script>
+</body>
+</html>
