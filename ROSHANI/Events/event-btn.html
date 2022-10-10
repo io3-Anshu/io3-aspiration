@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-btn</title>
+</head>
+<style>
+    #btn0,#btn1,#btn2,#btn3,#btn4{
+        width: 8em;
+        padding: 0.5rem;
+        border-radius: 50px;
+        border: none;
+        border:1px solid orangered;
+        font-weight: 900;
+        margin: 8em 3em;
+        background: cornflowerblue;
+        text-decoration: none;
+}
+</style>
+<body>
+    <div class="content" >
+    <h1>Different Events types in javascript</h1>
+    <button type="button" id="btn0" onclick="alert('i am awesome, but no one using me')">button</button>
+        
+    <a href="#" class="callingBTN" id="btn1" onclick="callingFunction()">button</a>
+    <button type="button" id="btn2">button</button>
+    <button type="button" id="btn3">button</button>
+    <!-- <button type="button" id="btn4">button</button> -->
+    </div>
+    <script>
+// 4 way of writing events in javascript
+
+// 1: using inline events alert();
+// 2: by calling a function (we already seen and most common way of writing)
+// 3: using inline events (HTML onclick="" property and element.onclick)
+// 4: using event listeners (addEventListener and IE's attachEvent)
+
+        const callingFunction = () => {
+            alter('most common way of writing functions first');
+        }
+
+        const btn2 = document.getElementById('btn2');
+        btn2.onclick = function(){
+            console.log(('most common way of writing functions second'));
+        }
+        // overwrite
+        btn2.onclick = function(){
+            alert('most common way of writing functions second')
+        }
+
+        // no overwrite show both
+        const btn3 = document.querySelector('#btn3');
+        btn3.addEventListener ( 'click', () => {
+            alert('most common way of writing functions third => on alert')
+        })
+        btn3.addEventListener ( 'click', () => {
+            console.log(('most common way of writing functions third => in console'));
+        })
+        
+        
+    </script>
+</body>
+</html>
