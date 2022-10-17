@@ -1,0 +1,67 @@
+<!-- The window object allows execution of code at specified time intervals.
+These time intervals are called timing events.
+the two key methods to use with JavaScript are:
+setTimeout() and setInterval() along with clearInterval()..
+
+1. The setTimeout() method sets a timer which executes a function or specified  
+   piece of code once the time expires.
+
+2. The setInterval() method, with repeatedly calls a function or executes a  code
+   snippet, with a fixed time delay between each call. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME_BASED_EVENTS</title>
+</head>
+<body>
+    <H1 id="myId" class="mycls">wow! magic.....😊</H1>
+    <button onclick="startTimer()">click me</button>
+    
+    <H1 id="myNum" class="mycls">choses your lucky number....😊</H1>
+    <button onclick="startTimerSecond()">start</button>
+    <button onclick="stopTimer()">stop</button>
+
+    <script>
+        let myData = document.querySelector('#myId');
+        
+        // function functionName(){
+        //     myId.innerHTML = 'Hi there..!🤞'
+        // }
+        // function startTimer(){
+        //     myId.innerHTML = 'Loading data.....';
+        //     setTimeout(functionName, 1000)
+        // }
+        // or
+        // function startTimer(){
+        //     myId.innerHTML = 'Loading data.....';
+        //     setTimeout(function(){
+        //         myId.innerHTML = 'Hi there..!🤞';
+        //     }, 1000)
+        // }
+        //or    
+        function startTimer(){
+            myId.innerHTML = 'Loading data.....';
+            setTimeout(() => {
+                myId.innerHTML = 'Hi there..!🤞';
+            }, 1000)
+        }
+
+        let myNum = document.querySelector('#myNum');
+        let num = 0;
+        let timerRef;
+        function startTimerSecond(){
+            myNum.innerHTML = 'Loading data.....';
+            timerRef = setInterval(() => {
+                myNum.innerHTML = `Hi there..!🤞, guessing your lucky number ${num}`;
+                num++;
+            }, 1000)
+        }
+        function stopTimer(){
+            clearInterval(timerRef);
+        }
+    </script>
+</body>
+</html>

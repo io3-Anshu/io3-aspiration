@@ -15,13 +15,36 @@
         background-color: rgb(195, 171, 217);
         font-weight: 600;
     }
+
+    .myCls{
+        width: 200px;
+        padding: 1rem;
+        margin: 0.5em;
+        background: #aeaeee;
+        font-size: 20px;
+        border-radius: 50px;
+        border:2px solid #020924;
+        display: inline-table;
+        border-inline-style: none;
+        box-shadow: 10px 10px 20px #020924;
+        font-family:'Times New Roman', Times, serif;
+        
+    }
+    #para1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
 </style>
 <body>
 <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas temporibus mollitia culpa, ea quasi architecto fugiat quibusdam reprehenderit quisquam omnis laboriosam. Fuga atque, quam unde corrupti ut officiis molestias dignissimos commodi tenetur ipsa expedita nisi consequatur dolores eaque ex voluptas nobis! Tenetur necessitatibus qui quod, obcaecati cumque libero? A ut molestiae neque consequuntur laborum tempora tenetur, corrupti vel, temporibus est quam! Perspiciatis sequi pariatur quae minus expedita sunt distinctio reprehenderit corrupti, exercitationem suscipit, ducimus sapiente voluptatum quaerat deserunt quia. Eveniet, perferendis eum error amet temporibus iste dicta perspiciatis aliquid sit nesciunt sequi voluptatum alias maiores animi veritatis, incidunt nisi, natus laudantium. Officia sint fugiat similique vero sed modi adipisci tempora unde, nulla cupiditate corporis in voluptates aliquid reprehenderit illo officiis nam facilis commodi ut, doloribus eligendi libero laborum. Mollitia porro voluptatem non minima, rerum nobis tempore vero atque quam dignissimos, necessitatibus perferendis libero ad corporis vel quis harum totam cumque odio. Quae saepe tempora vero modi, nemo, amet accusamus dolorum fuga quisquam recusandae expedita! Amet dolorem voluptatum quidem in architecto eos corporis veritatis quaerat placeat natus expedita excepturi est qui officia, facere voluptates commodi molestiae aliquam rerum distinctio laborum aut itaque fuga. Iure ad aperiam, ipsa eaque incidunt voluptas temporibus?</p>
+
+<p id="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas temporibus mollitia culpa, ea quasi architecto fugiat quibusdam reprehenderit quisquam omnis laboriosam. Fuga atque, quam unde corrupti ut officiis molestias dignissimos commodi tenetur ipsa expedita nisi consequatur dolores eaque ex voluptas nobis! Tenetur necessitatibus qui quod, obcaecati cumque libero? A ut molestiae neque consequuntur laborum tempora tenetur, corrupti vel, temporibus est quam! Perspiciatis sequi pariatur quae minus expedita sunt distinctio reprehenderit corrupti, exercitationem suscipit, ducimus sapiente voluptatum quaerat deserunt quia. Eveniet, perferendis eum error amet temporibus iste dicta perspiciatis aliquid sit nesciunt sequi voluptatum alias maiores animi veritatis, incidunt nisi, natus laudantium. Officia sint fugiat similique vero sed modi adipisci tempora unde, nulla cupiditate corporis in voluptates aliquid reprehenderit illo officiis nam facilis commodi ut, doloribus eligendi libero laborum. Mollitia porro voluptatem non minima, rerum nobis tempore vero atque quam dignissimos, necessitatibus perferendis libero ad corporis vel quis harum totam cumque odio. Quae saepe tempora vero modi, nemo, amet accusamus dolorum fuga quisquam recusandae expedita! Amet dolorem voluptatum quidem in architecto eos corporis veritatis quaerat placeat natus expedita excepturi est qui officia, facere voluptates commodi molestiae aliquam rerum distinctio laborum aut itaque fuga. Iure ad aperiam, ipsa eaque incidunt voluptas temporibus?</p>
     <!-- button#btn*3 -->
     <button id="btn" onclick="toggleHide()">submit</button>
     <button id="btn" onclick="myfun()">click me :)</button>
     <button id="btn" onclick="mywhatsapp()">whatsapp</button>
+    <div class="myCls" id="myId" onclick="toggleHide_1()"><span></span>div-with-span-button</div>
+
 
     <script>
 /*==============================================================================================*/        
@@ -81,10 +104,21 @@ function mywhatsapp(){
         document.body.style.backgroundColor = '#25D366';
         document.body.style.color = 'white';
 }
+
+function toggleHide_1(){
+    let  myId = document.getElementById('myId');
+    let  para1 = document.getElementById('para1')
+
+    if(para1.style.color = 'red'){
+        para1.style.color = '#aaccff';
+    }else{
+        para1.style.color = '#cd201f';
+    }
+}
 /* facebk = #3b5999
     twitter = #00aced
     whatsapp = #25D366
-    youtube = cd201f */ 
+    youtube = #cd201f */ 
     
     </script>
 </body>

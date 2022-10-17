@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS-3</title>
+</head>
+<body>
+    <h1 id="heading" class="myCls my_Cla my_Cls">you have click the heading</h1>
+    
+    <script>
+        document.getElementById('heading') .addEventListener('click',function(e){
+            let variable;
+            console.log('hay.... You click me!!');
+            variable = e.target;
+            // variable = e.target.className;
+            // variable = e.target.classList;
+            // variable = e.target.id;
+            // variable = Array .from(e.target.className);
+            // variable = Array .from(e.target.classList);
+            // variable = e.offsetX;
+            // variable = e.offsetY;
+            console.log(variable);
+        });
+    
+
+    </script>
+</body>
+</html>
