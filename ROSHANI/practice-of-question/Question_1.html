@@ -50,8 +50,11 @@
 
          /** CORRECT THE MISTAKES **/
          /* Fix the in the code tab to pass this challenge (only syntax errors)*/
-         // ?????
-
+         function square(){
+            // return 5*5;
+            return Math.pow(5,2)
+         }
+         console.log(square())
 
          /** RETURN SOMETHING TO ME!!**/
          /* Write a function  that returns the string "something" joined with a space " " and
@@ -65,50 +68,104 @@
           /** CONVERT HOURS INTO SECONDS **/
           /* Write a function  that converts hours into seconds */
           let hours = 2
-          console.log(`Hour => ${hours} into seconds => ${hours*3600}`)
+          console.log(`Hours => ${hours} into seconds => ${hours*3600}`)
 
           /** MAXIMUM EDGE OF A TRIANGLE**/
           /* Create a function that find the maximum range of a triangles third edge, where the side lengths are all integers. */
-
+         var side1 = 8;
+         var side2 = 10;
+         // var thirdEdge = (side1+side2)-1
+         // console.log(thirdEdge)
+         function thirdEdge(){
+            return `This is third edge ${((side1+side2)-1)}`
+         }
+         console.log(thirdEdge())
 
           /** RETURN THE REMAINDER FROM TWO NUMBERS**/
           /* There is a single operator in JavaScript , capable of providing  the remainder of a division operation . two numbers are
              passed as parameters . the firs parameter divided by second parameter will have a remainder. possibly zero. Return that value .*/
+             let x = 5;
+             let y = 8;
+             let z = x/y;
+             console.log(z.toFixed(1))
 
           /** FIND THE PERIMETER OF A RECTANGLE**/
           /* Create a function that takes length  and width and find the perimeter of a rectangle .*/   
-
+          
+         let length = 5;
+         let width = 4;
+         function perimeter (){
+         return `perimeter of a rectangle ${(2*(length + width))} `;
+         }
+         console.log(perimeter())
 
           /** CONVERT AGE TO DAYS **/
           /* Create a function that takes the age in years and return the age in days.*/
-
+         let age = 15;
+         function ageInToDays(){
+            return `ram is ${age} years old and Days in ${age*365} `;
+         } 
+         console.log(ageInToDays())
 
           /** BUGGY CODE (PART-1)**/
           /* Fix the code in the code tag to pass this challenge (only syntax errors)*/
-
+         function cubes (){
+            // return 3**3
+            return Math.pow(3,3)
+         }
+         console.log(cubes())
 
           /** RETURN THE FIRST ELEMENT IN AN ARRAY**/
           /* Create a function that takes an array containing only numbers and return the first element.*/
+         const array = [52,56 ,32, 6, 35, 48, 9];
+         console.log(array.shift())
+         // const first = [...array].shift()
+         // console.log((first))
 
 
 
           /** POWER CALCULATOR **/
           /* Create a function that voltage and current and return the calculated power.*/
+         let voltage = 50;
+         let current = 25;
+         function powerFun(){
+            return `power equals current times voltage p = ${current*voltage} `;
+         } 
+         console.log(powerFun());
 
           /** RETURN THE SUM OF TWO NUMBERS**/
           /* Create a function that takes as arguments and return their sum. */
-
+         var num1 = 5;
+         var num2 = 2;
+         function add (){
+            return`sum of two numbers ${(num1+num2)} `;
+         }
+         console.log(add())
           
           /** CONVERT MINUTES INTO SECONDS**/
           /* Create a function that takes an integer minutes and converts it to seconds  */
-
+          let minutes = 60;
+          function minConSec (){
+            return `minutes in to seconds ${minutes*60}`;
+          }
+          console.log(minConSec())
           
           /** RETURN THE NEXT NUMBER FROM THE INTEGER PASSED**/
           /* Create a function that takes a number as an argument, increment the number by +1 and return the result. */
-
+         let increment = 0;
+         function newIncrement(){
+            return ++increment;
+         }
+         console.log(newIncrement());
           
           /**AREA OF A TRIANGLE **/
           /* Write a function that takes the base and height of a triangle and return its area.*/
+         let height = 5;
+         let base = 4;
+         function findArea (){
+            return `Area of a triangle A = ${1/2*base*height}`;
+         } 
+         console.log(findArea())
     </script>
 </body>
 </html>
