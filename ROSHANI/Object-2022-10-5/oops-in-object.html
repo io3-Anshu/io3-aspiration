@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS IN OBJECT (JAVASCRIPT)</title>
+</head>
+<body>
+    <script>
+    // first way 
+    let bioData_2 = {
+        myNM: "rani",
+        myAge: 21,
+        getData: function(){
+        console.log(`my name is ${bioData_2.myNM} and my age is ${bioData_2.myAge}`)
+        }
+    }
+    bioData_2.getData();
+
+    /** What is this Object ?
+     *  the definition of "this" object is that it contain the current context.
+     *  the this object can have different values depending  on where it is placed. **/
+
+    console.log(this) ;
+    console.log(this.alert('Awesome')); 
+    //it refers to the current context and that is window global object
+
+
+    function funName(){
+        console.log(this);
+    }
+    funName();
+
+    // var funName = 'sam';
+    // function funName(){
+    //     console.log(this.funName);
+    // }
+    // funName();
+
+    const obj = {
+        age : 15,
+        name(){
+            console.log(this);
+        }
+    }
+    obj.name();
+
+    let bioData_3 = {
+        mName :{
+            realName :"star",
+            channelName:'starChannel'
+        },
+        mAge:16,
+        gData (){
+            console.log(`My name is ${this.mName.channelName} and my age is ${this.mAge}`);
+        }
+    }
+    bioData_3.gData();
+
+
+    </script>
+    
+</body>
+</html>

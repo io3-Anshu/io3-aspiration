@@ -11,14 +11,44 @@
         <div>
             <label for="">Your name</label>
             <input type="text" name="" id="ice"><br>
-            <label for="" id="iceCream" name=""></label>
+        <label>Choose  an iceCream flavour <br>
+            <select name="iceCream" id="iceCream" onchange="selectElement()">
+            <option value="">select One....</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="vanilla">vanilla flavor </option>
+            <option value="strawberry">strawberry</option>
+            </select>
+        </label>
+        <br>
+        <div id="result"></div>
+
         </div>
     </div>
+    
     <script>
-        /* The onchange event occurs when the of an element has been change
+        /* The onchange event occurs when the of an element has been changed
         
         for radiobutton and checkboxes , the onchange event occurs when the checked 
-        state has been changed*/
+        state has been changed */
+        // const selectElement = () => {
+        //     const inputChange = document.getElementById('ice').value;
+        //     const iceCream = document.getElementById('iceCream').value;
+        //     const result = document.getElementById('result');
+
+        //     result.innerHTML  = ` Mr ${inputChange} select ${iceCream} ice-cream flavor`;
+        // }
+
+        // or 
+        /* Without onChange */
+        const iceCream = document.getElementById('iceCream');
+        iceCream.addEventListener('change' , () => {
+            const inputChange = document.getElementById('ice').value;
+            const iceCream = document.getElementById('iceCream').value;
+            const result =  document.getElementById('result');
+
+            result.innerHTML  = ` Mr ${inputChange} select ${iceCream} ice-cream flavor`;
+        });
+        
     </script>
 </body>
 </html>

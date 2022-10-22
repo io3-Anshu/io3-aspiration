@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+</head>
+<body>
+    <script>
+        /* Array Destructuring */
+        const myBioData = ['neha','sam', 52 ];
+
+        // let myFName = myBioData[0];
+        // let myLName = myBioData[1];
+        // let myAge = myBioData[2];
+
+        // or
+        let [myF_Name, myL_Name, my_Age] = myBioData;
+        console.log(my_Age);
+
+        // We can add value too 
+        let [myFName, myLName, myAge, myDegree="MCS"] = myBioData;
+        console.log(myDegree);
+        
+        /* Object Destructuring */
+        const my_BioData = {
+            FName :'naj',
+            LName :'khan',
+            Age : 42
+        }
+        // let Age = my_BioData.Age;
+        // let FName = my_BioData.FName;
+        // console.log(Age,FName);
+        // or 
+        let {FName, LName, Age, my_Degree="MCS"} = my_BioData;
+        console.log(my_Degree);
+
+        /* Object Properties */
+        /* We can now use Dynamic Properties */
+        let name = "raj";
+        const bio = {
+            [name] : "hi there !",
+            [25 + 5] : "sum of 25 + 5"
+        }
+        console.log(bio);
+
+        /** Spread Operator **/
+        /* not repeat it self */
+
+        const colors = ['red', 'green', 'blue', 'white'];
+        
+        const myColors = ['red', 'green', 'blue', 'white','yellow', 'black' ];
+        /* 2nd time  add one more color on top and tell we need to write it again on myColors array too */
+
+        const myFavColor = [ ...colors, 'yellow', 'black'];
+        console.log(myFavColor);
+        
+
+        /** ES7 FEATURES **/
+        /* 1: ARRAY INCLUDE */
+        const colorS = ['red', 'green', 'blue', 'white'];
+        const isPresent = colorS.includes('red');
+        // const isPresent = colorS.includes('purple');
+        console.log(isPresent);
+
+
+        /** ES8 FEATURES **/
+        /*  String padding 
+            Object.values() 
+            Object.entries()
+        */
+        
+        const message = "my name is sam ";
+        console.log(message);
+        console.log(message.padStart(5));
+        console.log(message.padEnd(10));
+
+        const person = {name:'Fred', age:25};
+        console.log(person);
+        console.log( Object.values(person));
+        console.log( Object.entries(person));
+
+
+        /*ES2018*/
+        const fPerson = {name:'Fred', age:25};
+
+        const sPerson = { ...fPerson};
+        console.log(fPerson);
+        console.log(sPerson);
+        
+    </script>
+</body>
+</html>

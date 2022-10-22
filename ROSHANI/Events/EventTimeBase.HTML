@@ -16,6 +16,7 @@ setTimeout() and setInterval() along with clearInterval()..
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIME_BASED_EVENTS</title>
 </head>
+
 <body>
     <H1 id="myId" class="mycls">wow! magic.....😊</H1>
     <button onclick="startTimer()">click me</button>
@@ -54,6 +55,7 @@ setTimeout() and setInterval() along with clearInterval()..
         let timerRef;
         function startTimerSecond(){
             myNum.innerHTML = 'Loading data.....';
+            
             timerRef = setInterval(() => {
                 myNum.innerHTML = `Hi there..!🤞, guessing your lucky number ${num}`;
                 num++;

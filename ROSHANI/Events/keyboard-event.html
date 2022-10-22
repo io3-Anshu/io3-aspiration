@@ -21,7 +21,7 @@
     <div class="main">
         <div>
             <p>Show the Key Board Event</p><br>
-            <input type="text" class="effect-1" onkeypress="keypress()" onkeydown="keydown()" onkeyup="keyup()"><br>
+            <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()"><br>
             <p id="key"></p>
         </div>
     </div>
@@ -30,17 +30,17 @@
         /* Events that occur when user press a key on the keyboard ,
         belong to the keyboardEvent Object.*/
 
-        // const keypress = () =>{
-        //     document.getElementById('key').innerHTML=`you press ${event.key} and it's code is ${event.key}`;
-        // }
+        const keyPress = () =>{
+            document.getElementById('key').innerHTML=`you press ${event.key} and it's code is ${event.code}`;
+        }
 
-        // const keyDown = () => {
-        //     document.getElementById('key').innerHTML ='key is Down';
-        // }
+        const keyDown = () => {
+            document.getElementById('key').innerHTML ='key is Down';
+        }
 
-        // const keyUp = () => {
-        //     document.getElementById('key').innerHTML ='key is Up';
-        // }
+        const keyUp = () => {
+            document.getElementById('key').innerHTML ='key is Up';
+        }
 
     </script>
 </body>
