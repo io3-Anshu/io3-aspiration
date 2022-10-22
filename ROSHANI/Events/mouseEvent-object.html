@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEventObject</title>
+</head>
+<style>
+    .main-div{
+        height: 70vh;
+        width: 90vw;
+        display: grid;
+        margin: 2% auto;
+        background: rgb(209, 110, 176);
+}
+    #box{
+        height: 5rem;
+        width: 5em;
+        background: rgb(102, 59, 189);
+        margin: auto;
+        padding: 3em;
+    }
+</style>
+<body>
+    <p id="myp" onmousedown="mouseDown()" onmouseup="mouseUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa similique vel, perferendis placeat doloremque minima molestiae alias fugiat harum qui libero voluptas natus totam illum deserunt. Ipsum ea quaerat ipsam delectus distinctio aliquid nesciunt dolores quas quam quidem iste quod sapiente vitae molestias dolorum nulla nam voluptatem minus nihil mollitia, voluptates eum enim laborum. Pariatur labore vitae exercitationem delectus aperiam? Pariatur similique laborum doloribus quasi, rem aspernatur alias doloremque perferendis. Expedita, reiciendis. Nam, omnis pariatur provident accusantium tempore quod est.</p>
+    <div class="main-div">
+        <div id="box"></div>
+    </div>
+    <script>
+        /*MOUSE EVENT IN JAVASCRIPT*/
+        /*The Mouse Event Object
+        Events that occur when the mouse interacts with the HTML
+        document belong to the MouseEvent Object.*/
+
+        function mouseDown(){
+            document.getElementById("myp").style.color = "#f8b627";
+        }
+        function mouseUp(){
+            document.getElementById("myp").style.color = "#fff";
+        }
+
+        //box
+        const mEnter = document.getElementById('box');
+        mEnter.addEventListener('mouseenter' , () => {
+            mEnter.style.backgroundColor = 'red';
+            console.log('Mouse Enter');
+        });
+        mEnter.addEventListener('mouseleave' , () => {
+            mEnter.style.backgroundColor = 'yellow';
+            console.log('Mouse Enter');
+        });
+    </script>
+</body>
+</html>

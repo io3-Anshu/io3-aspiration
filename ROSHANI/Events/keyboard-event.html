@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoardEvent</title>
+</head>
+<style>
+    .main{
+        height: 100vh;
+        width: 100vw;
+    }
+    .effect-1{
+        display: grid;
+        background: #abcabc;
+
+    }
+</style>
+<body>
+    <div class="main">
+        <div>
+            <p>Show the Key Board Event</p><br>
+            <input type="text" class="effect-1" onkeypress="keypress()" onkeydown="keydown()" onkeyup="keyup()"><br>
+            <p id="key"></p>
+        </div>
+    </div>
+    <script>
+        /* KEYBOARD EVENT OBJECT IN JAVASCRIPT*/
+        /* Events that occur when user press a key on the keyboard ,
+        belong to the keyboardEvent Object.*/
+
+        // const keypress = () =>{
+        //     document.getElementById('key').innerHTML=`you press ${event.key} and it's code is ${event.key}`;
+        // }
+
+        // const keyDown = () => {
+        //     document.getElementById('key').innerHTML ='key is Down';
+        // }
+
+        // const keyUp = () => {
+        //     document.getElementById('key').innerHTML ='key is Up';
+        // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT-OBJECT</title>
+</head>
+<style>
+    #btn3{
+        width: 8em;
+        padding: 0.5rem;
+        border-radius: 50px;
+        border: none;
+        border:1px solid orangered;
+        font-weight: 900;
+        margin: 8em 3em;
+        background: cornflowerblue;
+        text-decoration: none;
+}
+</style>
+<body>
+    <h1> Event Object types in javascript</h1>
+    <!-- <a href="#" class="callingBTN" id="btn1" onclick="callingFunction()">button</a> -->
+    <button type="button" id="btn3">button</button>
+   
+    <script>
+        /** WHAT IS EVENT OBJECT **/
+        /*Event object is the parent object of the event object.
+        for example
+        MouseEvent, focusEvent, keyboardEvent etc */
+        const eventBtn = document.getElementById('btn3');
+        const checkEvent = () => {
+            alert('we called event object');
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+             
+        }
+
+        eventBtn.addEventListener('click' , checkEvent);
+
+
+    </script>
+</body>
+</html>
