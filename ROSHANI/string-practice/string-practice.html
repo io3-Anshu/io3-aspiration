@@ -8,83 +8,50 @@
 </head>
 <body>
     <script>
-//=========================================================================================================
+//========================================================================================
+// find the length of string provide below 
+let string = 'hi this is string';
+console.log(string.length);
 
-// console.log(`Display only 280 characters of a string like the one used in Twitter ?`)
-let myTwtS = " Lorem ipsum, dolor sit  eos, dolor rem, quod  non  dicta? 2E end a qua erat ea que except uri acn us vitae value pt ati bus archive recto magna. Valutas, excepting impeding quasi vitae dolorous repellent's aligned minima dolor. Unde repellents sapele optio veniam numquam delectus perferendis iste atque eos sunt quas expedita rem tempora hic culpa fugiat minima rerum, esse alias? Optio ipsa inventore maiores neque quos! Ut temporibus tempora dolore suscipit corrupti quod amet vero labore, optio facere eligendi nesciunt nobis est beatae, assumenda tenetur quis error sapiente odit voluptatem! Fuga tempore architecto fugit consequuntur modi nostrum quo harum?"
-let myActualTweets = myTwtS.slice(0,280);
-console.log(myActualTweets)
-console.log(myActualTweets.length)
-console.log("Total paragraph length",myTwtS.length)
-//--------------------------------------------------------------------------------------------------------------------------
-// console.log(`Display the 50 backside data ?`)
-// let disBackSD = myTwtS.slice(-50); or
-let disBackSD = myTwtS.substr(-50);  /* this method is showing characters , not words */
-console.log(disBackSD)
 
-//--------------------------------------------------------------------------------------------------------------
+// find the last index number of string below provide
+let string_1 ='hi this is string';
+console.log(string_1.length-1);
 
-// REPLACE METHOD -->
+// create a veritable's of string with 150 latter || digit and console it make sure it's  output is in 50 latter || digit
+let words = " hello ! there we are fifty words with spaces ' ' rat beataese quos vero. Deleniti aut nam doloremque accusamus libero facere nihil sit consequuntur. " ;
+console.log(words.length); // ??
+let fiftyWords = words.slice(0,50)
+console.log(fiftyWords); // ??
+console.log(fiftyWords.length); // ??
 
-// replace the words " (dolor,  dicta, and quaerat )  to capital later  (DOLOR, DICTA and QUAERAT)"
-// let replaceWord = myTwtS.replace('dolor dicta quaerat ', 'DOLOR DICTA QUAERAT');
-// console.log(replaceWord) 
-// (ops!! it's not work here)
-// it's worked only one sentence or one word  <--- 
 
-// like
+// convert below providing string into array have 5 value and convert it again with array have 8 value 
+let string_2 = 'you, can, do, any, thing if u believe';
+// let arrVlu = 
+console.log(string_2.split(" ",5))
+console.log(string_2.split(" ",8))
 
-// replace this sentence " dolor sit  eos, dolor rem, quod  non  dicta?   TO   REPLACING THE SENTENCE"
-let replaceSen = myTwtS.replace('dolor sit  eos, dolor rem, quod  non  dicta?', 'REPLACING THE SENTENCE');
-console.log(replaceSen)
-// console.log(myTwtS)
+// find "believe " is  present or not in below provide string  and console it
+let string_3 = 'you, can, do, any, thing if u believe';
+console.log(string_3.includes("believe"));
 
-// replace the words " (dolor)  to capital later  (DOLOR)"
-let replaceWord = myTwtS.replace('dolor', 'DOLOR');
-console.log(replaceWord)
 
-// ====================================================================================
- // CHARACTER CODE
+// convert multidimensional array (nested array)  into dimensional array 
+let array = [[[],[],[],], [[],[],[],], [[],[],[],]];
+console.log(array.concat());
 
-//1.The charAt () method return the character at a specified index (position) in a string
-let indexPos = "HELLO WORLD";
-console.log(indexPos.charAt(1));
 
-//2. charCodeAt() method return index in a unicode of the charter at a specified index in a string :
-// the method return a UTF-16 code (an integer between 0 and 65535).
-// charCodeAt() method return index in a unicode of the charter in ASCII VALUE
-let uniCOde = "HELLO WORLD";
-console.log(uniCOde.charCodeAt(0));
-
-let uniCoDe = "ABCDEFGH";
-console.log(uniCoDe.charCodeAt(0));
-
-let uniCode = " A B C D E F G H";
-console.log(uniCode.charCodeAt(0));
-
-// Return the Unicode of the last character in a string 
-let UniCOde = "HELLO WORLD";
-let lastUniCOde = UniCOde.length-1;
-console.log(UniCOde.charCodeAt(lastUniCOde));
-
-//====================================================================================================
-// OTHER USEFUL METHODS
-let myName = "Lets_Code_With_Roshani";
-console.log(myName.toUpperCase());
-console.log(myName.toLowerCase());
-
-myName = "     Lets_Code_With_Roshani    ";
-console.log(myName.trim());  // the method remove outside space or whitespace
-
-//---------------------------------------------------------------------------------------------------------
-// How to convert string to array ?
-// A string can be converted to an array with the split()method
-
-let text = "a,b,c, d e |f|g| h | i"     //string
-console.log(text.split(",")); //split on commas
-console.log(text.split(" ")); //split on spaces
-console.log(text.split("|")); //split on pipe
+// find the sqrt of following element of array  and multiply each with 4 and return only  greater then 15
+const array_1 = [4,9,16,25,36,49,64,81];
+// const arr_1 = array_1.map(Math.sqrt)
+// console.log(arr_1)
+const arr = array_1.map(myFunction)
+function myFunction(arr) {
+    return arr*4
+}
+console.log(arr);
 
     </script>
-   </body>
+</body>
 </html>
