@@ -88,7 +88,25 @@
         const sPerson = { ...fPerson};
         console.log(fPerson);
         console.log(sPerson);
-        
+        /*ES2019*/
+        const arrObj = Object.entries(fPerson);
+        console.log(Object.fromEntries());  
+
+        /* How to fatten an array */
+        /* Converting 2nd and 3rd array into dimensional array */
+        const arr = [
+            ['zone_1', 'zone_2'],['zone_5', 'zone_6'],
+            ['zone_3', 'zone_4'],['zone_7', ['zone_8', 'zone_9', ['zone_10', 'zone_11']]]
+        ];
+        let flatArr = arr.reduce((accum, currVal) => {
+            return accum.concat(currVal);
+        })
+        console.log(flatArr);
+        console.log(arr.flat());
+        console.log(arr.flat(2));
+        console.log(arr.flat(3));
+        console.log(arr.flat(Infinity));
+
     </script>
 </body>
 </html>
