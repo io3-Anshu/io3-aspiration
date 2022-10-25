@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <script>
+        /** Difference between higher order function and callback function ?
+         *  HIGHER ORDER FUNCTION 
+         *  function which takes another function as an arguments is called HOF 
+         *  wo function jo dusre function ko as an argument accept krta hai use HOF
+         * 
+         *  CALLBACK FUNCTION 
+         *  function which get passed as an argument to another function is called CBF
+         *  A callback function is a function that  is pased as agument to another function 
+         *  , to be "called back" at a later time.
+         *  
+         *  Jis bhi function ko hum kisi or function ke under as an arguments passed krte 
+         *  hai then usko hum callback bolte hai **/
+
+        // we need to create calculator
+        // CALLBACK FUNCTION
+        const add =(a,b) => {
+            return a+b;
+        }
+        console.log(add(5,2));
+
+        const subs =(a,b) => {
+            return a-b;
+            // return Math.abs(a-b);
+        }
+        console.log(subs(5,2));
+
+        const mult =(a,b) => {
+            return a*b;
+        }
+        console.log(mult(5,2))
+        
+        // HIGHER ORDER FUNCTION
+        const calculator = (num1, num2,operator) => {
+            return operator(num1, num2);
+        }
+        // calculator(9,2,subs);
+        console.log(calculator(9,2,subs));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagration</title>
+</head>
+<style>
+    .parent{
+        width: 40vw;
+        height: 40vh;
+        background-color: aquamarine;
+        display: grid;
+        margin: 15% auto;
+        border: solid green 5px;
+    }
+    .child{
+        width: 20vw;
+        height: 20vh;
+        background-color: rgb(127, 195, 255);
+        display: grid;
+        margin: 10% auto;
+        border: solid rgb(83, 0, 128) 5px;
+    }
+</style>
+<body>
+    <div class="parent" id="parentId">
+    <div class="child" id="childId"></div>
+    </div>
+    <script>
+        /* Event Propagratiom (Event Bubbing and Event Capturing) */
+    const parentId = document.getElementById('parentId');
+    const childId = document.getElementById('childId');
+
+    const parentCall = () => {
+        alert('Parent Div Call');
+    }
+    // console.log('Parent Div Call')
+    const childCall = () => {
+        alert('child Div Call');
+        event.stopPropagation();
+    }
+    // parentId.addEventListener('click' , parentCall);
+    // childId.addEventListener('click' , childCall);
+    parentId.addEventListener('click' , parentCall,true);
+    childId.addEventListener('click' , childCall,true);
+
+    </script>
+</body>
+</html>

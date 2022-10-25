@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JS</title>
+</head>
+<body>
+    <script>
+
+        /** What is Scope Chain and Lexical Scoping in JavaScript?
+         *  Lexical  Scoping means Now, the inner function can get
+         *  access to their parent functions variables But the vice-versa is not true. **/
+        let a = " hello guys. ";  // global scope
+        const first = () => {
+            let b = " How are you? ";
+
+            const second =() => {
+                let c = "hii, I am fine thank you";
+                console.log(a+b+c);
+            }
+            second();
+            // console.log(a+b+c); // I can't use C  because vice-versa 
+        }
+        first();
+
+        /** What in closures in JavaScript 
+         *  A closure is the combination of a function bundled together (enclosed) with 
+         *  references to its surrounding state (the laxical environment).
+         * 
+         *  In other words, a closure gives you
+         *  access to an outer function's scope from an inner function **/
+        // const outerFun = (a) => {
+        //     let b  = 10;
+        //     const innerFun = () => {
+        //         let sum  = a+b;
+        //         console.log(`the sum of the to no. is ${sum}`)
+        //     }
+        //     innerFun();
+        // }
+        // outerFun(15);
+
+        const outerFun = (a) => {
+            let b  = 10;
+            const innerFun = () => {
+                let sum  = a+b;
+                console.log(`the sum of the to no. is ${sum}`)
+            }
+            return innerFun;
+        }
+        let checkClosure = outerFun(5);
+        console.log(checkClosure);
+
+        /** Synchronous JavaScript Program **/
+        const fun_2 = () => {
+                console.log(`Function 2 is called`);
+        }
+        const fun_1 = () => {
+            console.log(`Function 1 is called`);
+            fun_2();
+            console.log(`Function 1 is called again (Synchronous)`);
+        }
+        fun_1();
+
+        /** Asynchronous JavaScript Program **/
+        const fun2 = () => {
+            setTimeout(()=> {
+                console.log(`Function 2 is called`);
+            }, 1000);
+        }
+        const fun1 = () => {
+            console.log(`Function 1 is called`);
+            fun2();
+            console.log(`Function 1 is called again (Asynchronous)`);
+        }
+        fun1();
+
+       /** curring **/
+       function sum (num1){
+        // console.log(num1);
+           return function (num2){
+        //  console.log(num1,num2);
+             return function (num3){
+         console.log(num1,num2,num3);
+            }
+        }
+       }
+       sum(5)(3)(8);
+
+        /** curring **/
+        // const sum = (num1) => (num2) => (num3) => console.log(num1,num2,num3);
+        // sum(5)(3)(8);
+
+        /** CALLBACK HELL **/
+        setTimeout(()=>{
+            console.log(`1 works is done`);
+            setTimeout(()=>{
+                console.log(`2 works is done`);
+                setTimeout(()=>{
+                    console.log(`3 works is done`);
+                    setTimeout(()=>{
+                        console.log(`4 works is done`);
+                        setTimeout(()=>{
+                            console.log(`5 works is done`);
+                            setTimeout(()=>{
+                                console.log(`6 works is done`);
+                                setTimeout(()=>{
+                                    console.log(`7 works is done`);
+                                }, 1000)  
+                            }, 1000)
+                        }, 1000)
+                    }, 1000)
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    </script>
+</body>
+</html>
