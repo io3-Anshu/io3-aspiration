@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QUESTION_2</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        /** LARGEST SWAP **/
-        /*  Write a function that takes a two digit number and determines  if it's the largest of
+      /** LARGEST SWAP **/
+      /*  Write a function that takes a two digit number and determines  if it's the largest of
             two possible digit swaps . To illustrate:largestSwap(27) => false largestSwap(43) => true 
             if 27 is our input , we should return false because swapping the digits gives us 72, and 72 > 27.
             On the other hand , swapping 43 gives us 34, and 43 > ... */
 
-        /** EXAMPLES
+      /** EXAMPLES
             Input: 2736
             Output :7236
             Explanation:
@@ -29,119 +29,157 @@
             number is already largest.
         **/
 
-        function largestSwap(num) {
-            console.log(num);
-            return num >= parseInt([...(num + "")].reverse().join(""));
-        }
-        console.log(largestSwap(27));
-        console.log(largestSwap(72));
+      function largestSwap(num) {
+        console.log(num);
+        return num >= parseInt([...(num + "")].reverse().join(""));
+      }
+      console.log(largestSwap(27));
+      console.log(largestSwap(72));
 
-        /** What's Hiding Amongst the crowd? **/
-        /*  A word is on the loose and now has tried to hide amongst a crowd of tall letters! Help write a 
+      /** What's Hiding Amongst the crowd? **/
+      /*  A word is on the loose and now has tried to hide amongst a crowd of tall letters! Help write a 
             function to detect what the word is, knowing the following rules: The wanted word is in lowercase. 
             The crowd of letter  is all in uppercase. Note that the word will be  spread out amongst the random
             letters, but their letters remain...*/
 
-
-
-            /** HEX TO BINARY **/
-            /*  Create a function that will take a HEX number the binary equivalent (as a string ). Example 
+      /** HEX TO BINARY **/
+      /*  Create a function that will take a HEX number the binary equivalent (as a string ). Example 
                 toBinary(OfFF)=> "111111" toBinary(OxAA)=> "1010101010" toBinary(OxFA)=> "11111101010" Note the number 
                 will be always an 8-bit number. */
 
-
-            /** OLDER THAN ME **/
-            /*  Create a method in the person class which return how another person's age compares. 
+      /** OLDER THAN ME **/
+      /*  Create a method in the person class which return how another person's age compares. 
                 Given the instances p1, p2 and p3, which will be initialized with the attributes and age 
                 , return a sentence in the following format : "{other person name } is {older than /younger than / the same age as } me." */
+      var fName = "ram";
+      var sName = "sam";
+      var thName = "AJAY";
+      // var  personName = prompt("Enter the person name,(p1,p2,p3) ")
+      function personName_(p1, p2, p3) {
+        if ((fName, p1 >= 25)) {
+          return `${fName} is ${p1} years old, he is older than me`;
+        } else if ((sName, p2 <= 25, p2 >= 16)) {
+          return `${sName} is ${p2} years old, he is younger than me`;
+        } else thName, p3 <= 15;
+        {
+          return `${thName} is ${p3} years old, he is same age as me`;
+        }
+      }
+      // personName();
+      console.log(personName_((p1 = 0), (p2 = 25), (p3 = 0)));
 
-            
-            /** DRINK SORTING **/
-            /*  You will be given an array of drinks, with each drink being an object with two properties: 
+      /** DRINK SORTING **/
+      /*  You will be given an array of drinks, with each drink being an object with two properties: 
                 name and price . Create a function that has the drinks array as an argument and return the 
                 drinks object sorted by price in ascending order. Assume that the following array of drink 
                 object needs to be sorted:drinks = [{name:"lem..."}]*/
 
-            
-            /** FIND THE TIME **/
-            /*  The time has a format:hours:minutes. Both hours and minutes has two digits , like 09:00.
+      // const drinks = prompt("lemon(20), mango(50), orange(40), watermelon(30)")
+      // const price =prompt("Enter your price")
+      function drinkflavor({ drinks, price }) {
+        if (drinks == "lemon" || (drinks == 20 && price == 20)) {
+          console.log(`You have lemon juice because you paid ${price} rupees.`);
+        } else if (drinks == "mango" || (drinks == 50 && price == 50)) {
+          console.log(
+            `You will get mango juice because you have given ${price} rupees.`
+          );
+        } else if (drinks == "orange" || (drinks == 40 && price == 40)) {
+          console.log(
+            `You will get orange juice because you have given ${price} rupees.`
+          );
+        } else if (drinks == "watermelon" || (drinks == 30 && price == 30)) {
+          console.log(
+            `You will get watermelon juice because you have given ${price} rupees.`
+          );
+        } else {
+          console.log(`Please check the price`);
+        }
+      }
+      // drinkflavor({drinks, price});
+
+      /** FIND THE TIME **/
+      /*  The time has a format:hours:minutes. Both hours and minutes has two digits , like 09:00.
                 Make a regexp to find time in th string :BreakFast at 09:00 in the room 123:456. In this 
                 task there's no need to check time correctness yet, so 25:99 can also be a valid result .
                 the regexp should not match 123:456.*/
+      let reg = "BreakFast at 09:00 in the room 123:456 ";
+      let pattern = /09:00/;
+      let result = reg.match(pattern);
+      console.log(result);
 
-
-            
-            /** GROUP RANGES X|Y **/
-            /*  Groups and range indicate groups and range of expression characters.The regular expression x|y 
+      /** GROUP RANGES X|Y **/
+      /*  Groups and range indicate groups and range of expression characters.The regular expression x|y 
                 matches either "x" or "y". const REGEXP =/blue|green/"red flag".match(REGEXP)//red "blue flag"
-                .match(REGEXP)// blue//Matches "blue" in "blue flag" and "red" in "red flag".  */
+                .match(REGEXP)// blue//Matches "blue" in "blue flag" and "red" in "red flag".*/
+      const REG_r = "red flag";
+      const REGEXP_r = /red|green/;
+      const result_1 = REG_r.match(REGEXP_r); //red
 
+      // const REG_b = "blue flag";
+      const REGEXP_b = /green|blue/;
+      const result_2 = "blue flag".match(REGEXP_b); // blue
+      //Matches "blue" in "blue flag" and "red" in "red flag"
+      console.log(result_1);
+      console.log(result_2);
 
-            
-            /** NATIVE PROMISE , INTRODUCING THE EXECUTOR **/
-            /*  Promise are just object that contain the outcome of asynchronous operations So when do you use one?
+      /** NATIVE PROMISE , INTRODUCING THE EXECUTOR **/
+      /*  Promise are just object that contain the outcome of asynchronous operations So when do you use one?
                 When you want to control the outcome of an asynchronous operation. All you have to do is wrap the 
                 asynchronous function with a promise constructor. the promise constructor requires you to pass a function
                 called the executor...  */
+      const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("foo");
+        }, 300);
+      });
 
+      promise.then((value) => {
+        console.log(value);
+        // expected output: "foo"
+      });
 
-            
-            /** NUMBER OF SQUARES IN AN  N*N GRID **/
-            /*  Create a function that calculate the number of different in squares in an n*n square grid. check the 
+      console.log(promise);
+      // expected output: [object Promise]
+
+      /** NUMBER OF SQUARES IN AN  N*N GRID **/
+      /*  Create a function that calculate the number of different in squares in an n*n square grid. check the 
                 Resources tab. Ex:numberSquare(2)=>5 */
 
-            
-            /** SUM OF RESISTANCE IN SERIES CIRCUITS **/
-            /*  When resistors are connected  in series, the same current passes through each resistor in the chain 
+      /** SUM OF RESISTANCE IN SERIES CIRCUITS **/
+      /*  When resistors are connected  in series, the same current passes through each resistor in the chain 
                 and the total resistance, RT,of the circuit must be equal to the sum of all the individual resistors
                 added together.That is RT= R1+R2+R3... Create a function that takes an array of value resistance that are... */
 
-
-            /** SUM OF RESISTANCE IN SERIES CIRCUITS **/
-            /*  When resistors are connected  in series, the same current passes through each resistor in the chain 
+      /** SUM OF RESISTANCE IN SERIES CIRCUITS **/
+      /*  When resistors are connected  in series, the same current passes through each resistor in the chain 
                 and the total resistance, RT,of the circuit must be equal to the sum of all the individual resistors
                 added together.That is RT= R1+R2+R3... Create a function that takes an array of value resistance that are... */
 
-
-            /** SUM OF RESISTANCE IN SERIES CIRCUITS **/
-            /*  When resistors are connected  in series, the same current passes through each resistor in the chain 
+      /** SUM OF RESISTANCE IN SERIES CIRCUITS **/
+      /*  When resistors are connected  in series, the same current passes through each resistor in the chain 
                 and the total resistance, RT,of the circuit must be equal to the sum of all the individual resistors
                 added together.That is RT= R1+R2+R3... Create a function that takes an array of value resistance that are... */
-            
-            /****/
-            /**/
 
+      /****/
+      /**/
 
-            
-            /****/
-            /**/
+      /****/
+      /**/
 
+      /****/
+      /**/
 
+      /****/
+      /**/
 
+      /****/
+      /**/
 
-            
-            /****/
-            /**/
+      /****/
+      /**/
 
-
-            
-            /****/
-            /**/
-
-            
-            /****/
-            /**/
-
-            
-            /****/
-            /**/
-
-            
-            /****/
-            /**/
-
-
-
+      /****/
+      /**/
     </script>
-</body>
+  </body>
 </html>
